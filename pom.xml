@@ -28,5 +28,37 @@
             <scope>test</scope>
         </dependency>
 
+<!--        <dependency>-->
+<!--            <groupId>com.aventstack</groupId>-->
+<!--            <artifactId>extentreports</artifactId>-->
+<!--            <version>5.0.6</version>-->
+<!--        </dependency>-->
+        <!-- Recommended for TestNG + HTML reports (everything included) -->
+<!--        <dependency>-->
+<!--            <groupId>com.aventstack</groupId>-->
+<!--            <artifactId>extentreports</artifactId>-->
+<!--            <version>4.1.7</version>-->
+<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<!--        <dependency>-->
+<!--            <groupId>com.aventstack</groupId>-->
+<!--            <artifactId>extentreports</artifactId>-->
+<!--            <version>5.1.2</version>-->
+<!--        </dependency>-->
+        <!-- HTML Reporter Module (needed for ExtentHtmlReporter) -->
+<!--        <dependency>-->
+<!--            <groupId>com.aventstack</groupId>-->
+<!--            <artifactId>extentreports-html</artifactId>-->
+<!--            <version>5.1.2</version>-->
+<!--        </dependency>-->
+
+
+<!--        <dependency>-->
+<!--            <groupId>com.aventstack</groupId>-->
+<!--            <artifactId>extentreports</artifactId>-->
+<!--            <version>5.0.9</version> &lt;!&ndash; or latest stable &ndash;&gt;-->
+<!--        </dependency>-->
+
     </dependencies>
 </project>

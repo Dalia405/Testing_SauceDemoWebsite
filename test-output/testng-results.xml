@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-08T21:57:41 GMT+02:00" name="Command line suite" finished-at="2025-04-08T21:57:44 GMT+02:00" duration-ms="2568">
+    <groups>
+    </groups>
+    <test started-at="2025-04-08T21:57:41 GMT+02:00" name="Command line test" finished-at="2025-04-08T21:57:44 GMT+02:00" duration-ms="2568">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:tests.LoginTest@1ad282e0]" started-at="2025-04-08T21:57:34 GMT+02:00" name="BeforeClass" finished-at="2025-04-08T21:57:41 GMT+02:00" duration-ms="7339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method signature="testValidLogin(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.LoginTest@1ad282e0]" started-at="2025-04-08T21:57:41 GMT+02:00" name="testValidLogin" data-provider="validData" finished-at="2025-04-08T21:57:42 GMT+02:00" duration-ms="1199" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.saucedemo.com/inventory.html]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:tests.LoginTest@1ad282e0]" started-at="2025-04-08T21:57:44 GMT+02:00" name="AfterClass" finished-at="2025-04-08T21:57:44 GMT+02:00" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.home.MenuTest">
+        <test-method signature="testOpenMenu()[pri:1, instance:tests.home.MenuTest@60438a68]" started-at="2025-04-08T21:57:42 GMT+02:00" name="testOpenMenu" finished-at="2025-04-08T21:57:43 GMT+02:00" duration-ms="433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOpenMenu -->
+        <test-method signature="testSideBarLinks(java.lang.String,java.lang.String)[pri:2, instance:tests.home.MenuTest@60438a68]" started-at="2025-04-08T21:57:43 GMT+02:00" name="testSideBarLinks" data-provider="sidebar" finished-at="2025-04-08T21:57:44 GMT+02:00" duration-ms="839" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[reset_sidebar_link]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.saucedemo.com/inventory.html]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA['Remove' buttons should not be visible after removing all items. expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 'Remove' buttons should not be visible after removing all items. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at pages.home.HomePage.sideBarLinks(HomePage.java:85)
+at tests.home.MenuTest.testSideBarLinks(MenuTest.java:42)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at tests.TestRunner.main(TestRunner.java:20)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSideBarLinks -->
+      </class> <!-- tests.home.MenuTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
