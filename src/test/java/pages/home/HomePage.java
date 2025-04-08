@@ -11,6 +11,7 @@ import tests.base.BaseTest;
 import java.time.Duration;
 import java.util.List;
 
+//menu -footer -filtration -cart
 public class HomePage {
     WebDriver driver;
     public HomePage(WebDriver driver){
@@ -20,16 +21,7 @@ public class HomePage {
     //menu
     By _menu=By.id("react-burger-menu-btn");
     By _menuWrap=By.className("bm-menu-wrap");
-    By _inventoryLink=By.id("inventory_sidebar_link");
-    By _aboutLink=By.id("about_sidebar_link");
-    By _logoutLink=By.id("logout_sidebar_link");
-    By _resetLink=By.id("reset_sidebar_link");
-    By _crossBTN=By.id("react-burger-cross-btn");
 
-    //footer
-    By _twitterBTN= By.xpath("//*[@id=\"page_wrapper\"]/footer/ul/li[1]/a");
-    By _facebookBTN= By.xpath("//*[@id=\"page_wrapper\"]/footer/ul/li[2]/a");
-    By _linkedinBTN= By.xpath("//*[@id=\"page_wrapper\"]/footer/ul/li[3]/a");
 
     /* Actions */
     //menu

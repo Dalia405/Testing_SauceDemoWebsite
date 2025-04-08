@@ -1,17 +1,11 @@
 package tests.home;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.home.HomePage;
 import tests.base.BaseTest;
 
-import java.time.Duration;
-import java.util.List;
 
 public class MenuTest extends BaseTest {
     HomePage HomeP;
