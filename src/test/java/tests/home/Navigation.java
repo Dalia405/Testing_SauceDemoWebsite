@@ -1,25 +1,28 @@
+package tests.navigation;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 import java.util.List;
 
-public class Navigation {
+import tests.base.BaseTest;
 
-    WebDriver driver;
+public class Navigation extends BaseTest {
 
     @BeforeTest
-    public void setUp() {
-        driver = new EdgeDriver();
+    @Override
+    public void BeforeClass() {
+        super.BeforeClass();
     }
 
     @Test
     public void navigateProducts() {
         try {
+            WebDriver driver = getDriver(); 
             driver.get("https://www.saucedemo.com/");
             driver.manage().window().maximize();
 
@@ -28,12 +31,10 @@ public class Navigation {
             driver.findElement(By.id("password")).sendKeys("secret_sauce");
             driver.findElement(By.id("login-button")).click();
 
-            Thread.sleep(2000); // wait for login
+            Thread.sleep(2000); 
 
-            // Get product elements
             List<WebElement> productLinks = driver.findElements(By.className("inventory_item_name"));
 
-            // Visit first 3 products
             for (int i = 0; i < Math.min(6, productLinks.size()); i++) {
                 productLinks = driver.findElements(By.className("inventory_item_name")); // re-fetch elements
                 System.out.println("Visiting product: " + productLinks.get(i).getText());
@@ -50,8 +51,12 @@ public class Navigation {
 
     @AfterTest
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        // You can optionally call the parent class method to close the driver if needed
+        super.AfterClass();
+        // Alternatively, just use the shared driver and quit in your own method:
+        // WebDriver driver = getDriver();
+        // if (driver != null) {
+        //     driver.quit();
+        // }
     }
 }
