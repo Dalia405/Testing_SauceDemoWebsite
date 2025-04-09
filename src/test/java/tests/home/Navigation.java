@@ -2,16 +2,23 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.annotations.AfterTest;
 
 import java.util.List;
 
 public class Navigation {
-    public static void main(String[] args) {
 
+    WebDriver driver;
 
+    @BeforeTest
+    public void setUp() {
+        driver = new EdgeDriver();
+    }
 
-        WebDriver driver = new EdgeDriver();
-
+    @Test
+    public void navigateProducts() {
         try {
             driver.get("https://www.saucedemo.com/");
             driver.manage().window().maximize();
@@ -38,7 +45,12 @@ public class Navigation {
 
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
+        }
+    }
+
+    @AfterTest
+    public void tearDown() {
+        if (driver != null) {
             driver.quit();
         }
     }
