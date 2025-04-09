@@ -26,7 +26,6 @@ public class Navigation extends BaseTest {
             driver.get("https://www.saucedemo.com/");
             driver.manage().window().maximize();
 
-            // Login
             driver.findElement(By.id("user-name")).sendKeys("standard_user");
             driver.findElement(By.id("password")).sendKeys("secret_sauce");
             driver.findElement(By.id("login-button")).click();
@@ -36,7 +35,7 @@ public class Navigation extends BaseTest {
             List<WebElement> productLinks = driver.findElements(By.className("inventory_item_name"));
 
             for (int i = 0; i < Math.min(6, productLinks.size()); i++) {
-                productLinks = driver.findElements(By.className("inventory_item_name")); // re-fetch elements
+                productLinks = driver.findElements(By.className("inventory_item_name")); 
                 System.out.println("Visiting product: " + productLinks.get(i).getText());
                 productLinks.get(i).click();
                 Thread.sleep(1000);
@@ -51,12 +50,11 @@ public class Navigation extends BaseTest {
 
     @AfterTest
     public void tearDown() {
-        // You can optionally call the parent class method to close the driver if needed
-        super.AfterClass();
-        // Alternatively, just use the shared driver and quit in your own method:
-        // WebDriver driver = getDriver();
-        // if (driver != null) {
-        //     driver.quit();
-        // }
+        
+        // super.AfterClass();
+        WebDriver driver = getDriver();
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }
