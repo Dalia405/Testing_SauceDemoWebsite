@@ -7,7 +7,7 @@
         <methods>
           <include name="AfterClass"/>
           <include name="BeforeClass"/>
-          <include name="testInValidFormSubmission" invocation-numbers="0 1 2 3"/>
+          <include name="testInValidFormSubmission" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- tests.checkout.CheckOutInfoTest -->
     </classes>

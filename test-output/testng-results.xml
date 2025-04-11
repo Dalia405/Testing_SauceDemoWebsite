@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="3" failed="4" skipped="0">
+<testng-results ignored="0" total="7" passed="4" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-10T10:43:19 GMT+02:00" name="Command line suite" finished-at="2025-04-10T10:43:34 GMT+02:00" duration-ms="14533">
+  <suite started-at="2025-04-11T21:10:09 GMT+02:00" name="Command line suite" finished-at="2025-04-11T21:10:23 GMT+02:00" duration-ms="14235">
     <groups>
     </groups>
-    <test started-at="2025-04-10T10:43:19 GMT+02:00" name="Command line test" finished-at="2025-04-10T10:43:34 GMT+02:00" duration-ms="14533">
+    <test started-at="2025-04-11T21:10:09 GMT+02:00" name="Command line test" finished-at="2025-04-11T21:10:23 GMT+02:00" duration-ms="14235">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:tests.LoginTest@60438a68]" started-at="2025-04-10T10:43:14 GMT+02:00" name="BeforeClass" finished-at="2025-04-10T10:43:19 GMT+02:00" duration-ms="5244" status="PASS">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:tests.LoginTest@50de0926]" started-at="2025-04-11T21:10:01 GMT+02:00" name="BeforeClass" finished-at="2025-04-11T21:10:09 GMT+02:00" duration-ms="7590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method signature="testValidLogin(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.LoginTest@60438a68]" started-at="2025-04-10T10:43:20 GMT+02:00" name="testValidLogin" data-provider="validData" finished-at="2025-04-10T10:43:21 GMT+02:00" duration-ms="1156" status="PASS">
+        <test-method signature="testValidLogin(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.LoginTest@50de0926]" started-at="2025-04-11T21:10:09 GMT+02:00" name="testValidLogin" data-provider="validData" finished-at="2025-04-11T21:10:10 GMT+02:00" duration-ms="1352" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,17 +32,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:tests.LoginTest@60438a68]" started-at="2025-04-10T10:43:34 GMT+02:00" name="AfterClass" finished-at="2025-04-10T10:43:34 GMT+02:00" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:tests.LoginTest@50de0926]" started-at="2025-04-11T21:10:23 GMT+02:00" name="AfterClass" finished-at="2025-04-11T21:10:23 GMT+02:00" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
       </class> <!-- tests.LoginTest -->
       <class name="tests.checkout.CheckOutInfoTest">
-        <test-method signature="test()[pri:1, instance:tests.checkout.CheckOutInfoTest@de3a06f]" started-at="2025-04-10T10:43:28 GMT+02:00" name="test" finished-at="2025-04-10T10:43:28 GMT+02:00" duration-ms="463" status="PASS">
+        <test-method signature="test()[pri:1, instance:tests.checkout.CheckOutInfoTest@17695df3]" started-at="2025-04-11T21:10:17 GMT+02:00" name="test" finished-at="2025-04-11T21:10:18 GMT+02:00" duration-ms="535" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.checkout.CheckOutInfoTest@de3a06f]" started-at="2025-04-10T10:43:28 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-10T10:43:30 GMT+02:00" duration-ms="1454" status="FAIL">
+        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.checkout.CheckOutInfoTest@17695df3]" started-at="2025-04-11T21:10:18 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-11T21:10:20 GMT+02:00" duration-ms="1687" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -65,43 +65,17 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[stale element reference: stale element not found in the current frame
-  (Session info: chrome=135.0.7049.42)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bd18f14304506861d31c3d19d0c613a1, isElementDisplayed {id=f.D953C59558E5C27043011718C67384B8.d.EDAD438931AD58E6256713F1832CE958.e.64}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55962/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (bd18f14304506861d31c3d19d0c613a1)] -> css selector: svg.svg-inline--fa.fa-times-circle.fa-w-16.error_icon]
-Session ID: bd18f14304506861d31c3d19d0c613a1]]>
+              <![CDATA[Last Name error icon should NOT be visible expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
-  (Session info: chrome=135.0.7049.42)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bd18f14304506861d31c3d19d0c613a1, isElementDisplayed {id=f.D953C59558E5C27043011718C67384B8.d.EDAD438931AD58E6256713F1832CE958.e.64}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55962/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (bd18f14304506861d31c3d19d0c613a1)] -> css selector: svg.svg-inline--fa.fa-times-circle.fa-w-16.error_icon]
-Session ID: bd18f14304506861d31c3d19d0c613a1
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
-at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:113)
+              <![CDATA[java.lang.AssertionError: Last Name error icon should NOT be visible expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertFalse(Assert.java:79)
+at pages.checkout.CheckOutInfoPage.inValidFormSubmission(CheckOutInfoPage.java:82)
+at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:54)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -128,11 +102,11 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at tests.TestRunner.main(TestRunner.java:25)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInValidFormSubmission -->
-        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.checkout.CheckOutInfoTest@de3a06f]" started-at="2025-04-10T10:43:30 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-10T10:43:31 GMT+02:00" duration-ms="1356" status="FAIL">
+        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.checkout.CheckOutInfoTest@17695df3]" started-at="2025-04-11T21:10:20 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-11T21:10:21 GMT+02:00" duration-ms="1164" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -164,7 +138,8 @@ at tests.TestRunner.main(TestRunner.java:25)
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertFalse(Assert.java:79)
-at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:105)
+at pages.checkout.CheckOutInfoPage.inValidFormSubmission(CheckOutInfoPage.java:76)
+at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:54)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -195,7 +170,7 @@ at tests.TestRunner.main(TestRunner.java:25)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInValidFormSubmission -->
-        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.checkout.CheckOutInfoTest@de3a06f]" started-at="2025-04-10T10:43:31 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-10T10:43:33 GMT+02:00" duration-ms="1509" status="FAIL">
+        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.checkout.CheckOutInfoTest@17695df3]" started-at="2025-04-11T21:10:21 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-11T21:10:22 GMT+02:00" duration-ms="1060" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -227,7 +202,8 @@ at tests.TestRunner.main(TestRunner.java:25)
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertFalse(Assert.java:79)
-at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:105)
+at pages.checkout.CheckOutInfoPage.inValidFormSubmission(CheckOutInfoPage.java:76)
+at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:54)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -258,7 +234,7 @@ at tests.TestRunner.main(TestRunner.java:25)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInValidFormSubmission -->
-        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.checkout.CheckOutInfoTest@de3a06f]" started-at="2025-04-10T10:43:33 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-10T10:43:34 GMT+02:00" duration-ms="1368" status="FAIL">
+        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.checkout.CheckOutInfoTest@17695df3]" started-at="2025-04-11T21:10:22 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-11T21:10:23 GMT+02:00" duration-ms="1021" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -281,76 +257,12 @@ at tests.TestRunner.main(TestRunner.java:25)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: stale element not found in the current frame
-  (Session info: chrome=135.0.7049.42)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bd18f14304506861d31c3d19d0c613a1, isElementDisplayed {id=f.D953C59558E5C27043011718C67384B8.d.EDAD438931AD58E6256713F1832CE958.e.71}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55962/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (bd18f14304506861d31c3d19d0c613a1)] -> css selector: svg.svg-inline--fa.fa-times-circle.fa-w-16.error_icon]
-Session ID: bd18f14304506861d31c3d19d0c613a1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
-  (Session info: chrome=135.0.7049.42)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bd18f14304506861d31c3d19d0c613a1, isElementDisplayed {id=f.D953C59558E5C27043011718C67384B8.d.EDAD438931AD58E6256713F1832CE958.e.71}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55962/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (bd18f14304506861d31c3d19d0c613a1)] -> css selector: svg.svg-inline--fa.fa-times-circle.fa-w-16.error_icon]
-Session ID: bd18f14304506861d31c3d19d0c613a1
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
-at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:110)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at tests.TestRunner.main(TestRunner.java:25)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInValidFormSubmission -->
       </class> <!-- tests.checkout.CheckOutInfoTest -->
       <class name="tests.home.AddToCart">
-        <test-method signature="addProductsToCart()[pri:0, instance:tests.home.AddToCart@6c9f5c0d]" started-at="2025-04-10T10:43:21 GMT+02:00" name="addProductsToCart" finished-at="2025-04-10T10:43:28 GMT+02:00" duration-ms="7102" status="PASS">
+        <test-method signature="addProductsToCart()[pri:0, instance:tests.home.AddToCart@71d15f18]" started-at="2025-04-11T21:10:10 GMT+02:00" name="addProductsToCart" finished-at="2025-04-11T21:10:17 GMT+02:00" duration-ms="7292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductsToCart -->
