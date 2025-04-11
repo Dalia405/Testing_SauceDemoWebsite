@@ -2,8 +2,8 @@ package tests;
 
 import listeners.TestListener;
 import org.testng.TestNG;
-import tests.home.FooterTest;
-import tests.home.MenuTest;
+import tests.checkout.CheckOutInfoTest;
+import tests.home.*;
 
 public class TestRunner {
     public static void main(String[] args) {
@@ -12,7 +12,12 @@ public class TestRunner {
         testng.setTestClasses(new Class[]{
                 LoginTest.class,
                // FooterTest.class,
-                MenuTest.class
+                AddToCart.class,
+               // MenuTest.class,
+                //FiltrationTest.class
+               // Navigation.class
+
+                CheckOutInfoTest.class
         });
         // Add custom listener
         testng.addListener(new TestListener());

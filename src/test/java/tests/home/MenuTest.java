@@ -23,11 +23,11 @@ public class MenuTest extends BaseTest {
     @DataProvider(name = "sidebar")
     public Object[][] sideBarPath(){
         return new Object[][]{
-                // https://x.com/saucelabs
-               // {"inventory_sidebar_link","https://www.saucedemo.com/inventory.html"},
-                //{"about_sidebar_link","https://saucelabs.com/"},
+                 //https://x.com/saucelabs
+                {"inventory_sidebar_link","https://www.saucedemo.com/inventory.html"},
+                {"about_sidebar_link","https://saucelabs.com/"},
                 {"reset_sidebar_link","https://www.saucedemo.com/inventory.html"},
-                //{"logout_sidebar_link","https://www.saucedemo.com/"}
+                {"logout_sidebar_link","https://www.saucedemo.com/"}
         };
     }
     @Test(priority=2,dataProvider ="sidebar" )

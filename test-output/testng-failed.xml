@@ -3,13 +3,13 @@
 <suite name="Failed suite [Command line suite]">
   <test thread-count="5" name="Command line test(failed)">
     <classes>
-      <class name="tests.home.MenuTest">
+      <class name="tests.checkout.CheckOutInfoTest">
         <methods>
-          <include name="testSideBarLinks" invocation-numbers="0"/>
           <include name="AfterClass"/>
           <include name="BeforeClass"/>
+          <include name="testInValidFormSubmission" invocation-numbers="0 1 2 3"/>
         </methods>
-      </class> <!-- tests.home.MenuTest -->
+      </class> <!-- tests.checkout.CheckOutInfoTest -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->

@@ -29,13 +29,16 @@ public class HomePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //        By _menu=By.id("react-burger-menu-btn");
 //        By _menuWrap=By.className("bm-menu-wrap");
-        if (BaseTest.getDriver().findElement(_menuWrap).isDisplayed()){
-            wait.until(ExpectedConditions.elementToBeClickable(_menu)).click();
-            WebElement sideBar= wait.until(ExpectedConditions.visibilityOfElementLocated(_menuWrap));
-            Assert.assertTrue(sideBar.isDisplayed(),"sideBar is not present");
-        }
-        else{
-            System.out.println("Menu did not collapse or wrap correctly after clicking on Menu.");
+       WebElement menu= wait.until(ExpectedConditions.elementToBeClickable(_menu));
+       if(menu.isDisplayed()){
+           menu.click();
+           if (BaseTest.getDriver().findElement(_menuWrap).isDisplayed()){
+               WebElement sideBar= wait.until(ExpectedConditions.visibilityOfElementLocated(_menuWrap));
+               Assert.assertTrue(sideBar.isDisplayed(),"Menu did not collapse or wrap correctly after clicking on Menu.");
+           }
+       }
+       else{
+            Assert.assertTrue(menu.isDisplayed(),"Menu is not exist");
         }
     }
     public void closeMenu(){
@@ -55,29 +58,29 @@ public class HomePage {
     public void sideBarLinks(String idElement,String expectedUrl){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement sideBarLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(idElement)));
-        //Abdullah
-        driver.findElement(By.id("add-to-cart-sauce-labs-bike-light")).click();
-        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
-        //Abdullah
+
         if(sideBarLink.isDisplayed()){
             sideBarLink.click();
+
+            //        5. If it opens a new tab (like the About link), switch to it and verify the URL
+//            for (String handle : driver.getWindowHandles()) {
+//                driver.switchTo().window(handle);
+//            }
+            if(idElement.contains("about_sidebar_link")){
+               Assert.assertEquals(BaseTest.getDriver().getCurrentUrl(), expectedUrl, "URL mismatch");
+               driver.navigate().back();
+               openMenu();
+               return;
+            }
+            if(idElement.contains("reset_sidebar_link")){
+                List<WebElement> cartBadges = driver.findElements(By.className("shopping_cart_badge"));
+                List<WebElement> removeButtons = driver.findElements(By.cssSelector(".btn.btn_secondary.btn_small.btn_inventory"));
+                Assert.assertTrue(cartBadges.isEmpty(),"Cart badge is not empty! Found " + cartBadges.size() + " badge(s).");
+                Assert.assertTrue(removeButtons.isEmpty(),"'Remove' buttons should not be visible after removing all items.");
+            }
+             wait.until(ExpectedConditions.urlToBe(expectedUrl));
+            Assert.assertEquals(BaseTest.getDriver().getCurrentUrl(), expectedUrl, "URL mismatch");
         }
-//        5. If it opens a new tab (like the About link), switch to it and verify the URL
-//        for (String handle : driver.getWindowHandles()) {
-//            driver.switchTo().window(handle);
-//        }
-        if(idElement.contains("about_sidebar_link")){
-            driver.navigate().back();
-           openMenu();
-        }
-        if(idElement.contains("reset_sidebar_link")){
-            List<WebElement> cartBadges = driver.findElements(By.className("shopping_cart_badge"));
-            List<WebElement> removeButtons = driver.findElements(By.cssSelector(".btn.btn_secondary.btn_small.btn_inventory"));
-            Assert.assertTrue(cartBadges.isEmpty(),"Cart badge is not empty! Found " + cartBadges.size() + " badge(s).");
-            Assert.assertTrue(removeButtons.isEmpty(),"'Remove' buttons should not be visible after removing all items.");
-        }
-        wait.until(ExpectedConditions.urlToBe(expectedUrl));
-        Assert.assertEquals(BaseTest.getDriver().getCurrentUrl(), expectedUrl, "URL mismatch");
     }
 
 

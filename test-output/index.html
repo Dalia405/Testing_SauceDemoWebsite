@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">7 methods, 4 failed,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,7 +103,22 @@
                     <div class="method-list-content failed suite-Command_line_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="tests.home.MenuTest" class="method navigator-link" hash-for-method="testSideBarLinks(reset_sidebar_link, https://www.saucedemo.com/inventory.html)">testSideBarLinks(reset_sidebar_link, https://www.saucedemo.com/inventory.html)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.checkout.CheckOutInfoTest" class="method navigator-link" hash-for-method="testInValidFormSubmission(First, Last, , Error: Postal Code is required)">testInValidFormSubmission(First, Last, , Error: Postal Code is required)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.checkout.CheckOutInfoTest" class="method navigator-link" hash-for-method="testInValidFormSubmission(, , , Error: First Name is required)">testInValidFormSubmission(, , , Error: First Name is required)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.checkout.CheckOutInfoTest" class="method navigator-link" hash-for-method="testInValidFormSubmission(, Last, 12345, Error: First Name is required)">testInValidFormSubmission(, Last, 12345, Error: First Name is required)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.checkout.CheckOutInfoTest" class="method navigator-link" hash-for-method="testInValidFormSubmission(First, , 12345, Error: Last Name is required)">testInValidFormSubmission(First, , 12345, Error: Last Name is required)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Command_line_suite -->
@@ -117,7 +132,12 @@
                     <div class="method-list-content passed suite-Command_line_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="tests.home.MenuTest" class="method navigator-link" hash-for-method="testOpenMenu">testOpenMenu</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.home.AddToCart" class="method navigator-link" hash-for-method="addProductsToCart">addProductsToCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="tests.checkout.CheckOutInfoTest" class="method navigator-link" hash-for-method="test">test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -140,20 +160,97 @@
           <div class="suite-Command_line_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">tests.home.MenuTest</span>
+              <span class="class-name">tests.checkout.CheckOutInfoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testSideBarLinks(reset_sidebar_link, https://www.saucedemo.com/inventory.html)">
-                  </a> <!-- testSideBarLinks(reset_sidebar_link, https://www.saucedemo.com/inventory.html) -->
-                  <span class="method-name">testSideBarLinks</span>
-                  <span class="parameters">(reset_sidebar_link,https://www.saucedemo.com/inventory.html)</span>
-                  <div class="stack-trace">java.lang.AssertionError: &apos;Remove&apos; buttons should not be visible after removing all items. expected [true] but found [false]
-	at pages.home.HomePage.sideBarLinks(HomePage.java:85)
-	at tests.home.MenuTest.testSideBarLinks(MenuTest.java:42)
+                  <a name="testInValidFormSubmission(First, Last, , Error: Postal Code is required)">
+                  </a> <!-- testInValidFormSubmission(First, Last, , Error: Postal Code is required) -->
+                  <span class="method-name">testInValidFormSubmission</span>
+                  <span class="parameters">(First,Last,,Error: Postal Code is required)</span>
+                  <div class="stack-trace">java.lang.AssertionError: First Name error icon should NOT be visible expected [false] but found [true]
+	at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:105)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at tests.TestRunner.main(TestRunner.java:20)
+	at tests.TestRunner.main(TestRunner.java:25)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testInValidFormSubmission(, , , Error: First Name is required)">
+                  </a> <!-- testInValidFormSubmission(, , , Error: First Name is required) -->
+                  <span class="method-name">testInValidFormSubmission</span>
+                  <span class="parameters">(,,,Error: First Name is required)</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=135.0.7049.42)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bd18f14304506861d31c3d19d0c613a1, isElementDisplayed {id=f.D953C59558E5C27043011718C67384B8.d.EDAD438931AD58E6256713F1832CE958.e.71}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55962/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (bd18f14304506861d31c3d19d0c613a1)] -&gt; css selector: svg.svg-inline--fa.fa-times-circle.fa-w-16.error_icon]
+Session ID: bd18f14304506861d31c3d19d0c613a1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:25)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testInValidFormSubmission(, Last, 12345, Error: First Name is required)">
+                  </a> <!-- testInValidFormSubmission(, Last, 12345, Error: First Name is required) -->
+                  <span class="method-name">testInValidFormSubmission</span>
+                  <span class="parameters">(,Last,12345,Error: First Name is required)</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=135.0.7049.42)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bd18f14304506861d31c3d19d0c613a1, isElementDisplayed {id=f.D953C59558E5C27043011718C67384B8.d.EDAD438931AD58E6256713F1832CE958.e.64}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.42, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55962/devtoo..., se:cdpVersion: 135.0.7049.42, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (bd18f14304506861d31c3d19d0c613a1)] -&gt; css selector: svg.svg-inline--fa.fa-times-circle.fa-w-16.error_icon]
+Session ID: bd18f14304506861d31c3d19d0c613a1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:25)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testInValidFormSubmission(First, , 12345, Error: Last Name is required)">
+                  </a> <!-- testInValidFormSubmission(First, , 12345, Error: Last Name is required) -->
+                  <span class="method-name">testInValidFormSubmission</span>
+                  <span class="parameters">(First,,12345,Error: Last Name is required)</span>
+                  <div class="stack-trace">java.lang.AssertionError: First Name error icon should NOT be visible expected [false] but found [true]
+	at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:105)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:25)
 ... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -179,14 +276,29 @@
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.home.MenuTest</span>
+              <span class="class-name">tests.checkout.CheckOutInfoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testOpenMenu">
-                  </a> <!-- testOpenMenu -->
-                  <span class="method-name">testOpenMenu</span>
+                  <a name="test">
+                  </a> <!-- test -->
+                  <span class="method-name">test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.home.AddToCart</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addProductsToCart">
+                  </a> <!-- addProductsToCart -->
+                  <span class="method-name">addProductsToCart</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -203,7 +315,8 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Command line test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.LoginTest&quot;/&gt;
-      &lt;class name=&quot;tests.home.MenuTest&quot;/&gt;
+      &lt;class name=&quot;tests.home.AddToCart&quot;/&gt;
+      &lt;class name=&quot;tests.checkout.CheckOutInfoTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Command line test --&gt;
 &lt;/suite&gt; &lt;!-- Command line suite --&gt;
@@ -217,7 +330,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Command line test (2 classes)</span>
+                <span class="test-name">Command line test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -243,24 +356,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testValidLogin')
-data.setCell(0, 2, 'tests.LoginTest')
-data.setCell(0, 3, 1199);
+data.setCell(0, 1, 'addProductsToCart')
+data.setCell(0, 2, 'tests.home.AddToCart')
+data.setCell(0, 3, 7102);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testSideBarLinks')
-data.setCell(1, 2, 'tests.home.MenuTest')
-data.setCell(1, 3, 839);
+data.setCell(1, 1, 'testInValidFormSubmission')
+data.setCell(1, 2, 'tests.checkout.CheckOutInfoTest')
+data.setCell(1, 3, 1509);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testOpenMenu')
-data.setCell(2, 2, 'tests.home.MenuTest')
-data.setCell(2, 3, 433);
+data.setCell(2, 1, 'testInValidFormSubmission')
+data.setCell(2, 2, 'tests.checkout.CheckOutInfoTest')
+data.setCell(2, 3, 1454);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testInValidFormSubmission')
+data.setCell(3, 2, 'tests.checkout.CheckOutInfoTest')
+data.setCell(3, 3, 1368);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testInValidFormSubmission')
+data.setCell(4, 2, 'tests.checkout.CheckOutInfoTest')
+data.setCell(4, 3, 1356);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testValidLogin')
+data.setCell(5, 2, 'tests.LoginTest')
+data.setCell(5, 3, 1156);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'test')
+data.setCell(6, 2, 'tests.checkout.CheckOutInfoTest')
+data.setCell(6, 3, 463);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -275,11 +404,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Command_line_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.home.MenuTest</span>
+              <span class="ignored-class-name">tests.checkout.CheckOutInfoTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AfterClass</span>
+                <br/>
+                <span class="ignored-method-name">BeforeClass</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">tests.home.AddToCart</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">BeforeClass</span>
                 <br/>
@@ -302,27 +440,52 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">testValidLogin(standard_user, secret_sauce, https://www.saucedemo.com/inventory.html)</span>
-                <span class="method-start">7422 ms</span>
+                <span class="method-start">5344 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.home.MenuTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.home.AddToCart</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testOpenMenu</span>
-                <span class="method-start">8632 ms</span>
+                <span class="method-name">addProductsToCart</span>
+                <span class="method-start">6509 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.checkout.CheckOutInfoTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">test</span>
+                <span class="method-start">13614 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testSideBarLinks(reset_sidebar_link, https://www.saucedemo.com/inventory.html)</span>
-                <span class="method-start">9068 ms</span>
+                <span class="method-name">testInValidFormSubmission(, Last, 12345, Error: First Name is required)</span>
+                <span class="method-start">14082 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testInValidFormSubmission(First, , 12345, Error: Last Name is required)</span>
+                <span class="method-start">15540 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testInValidFormSubmission(First, Last, , Error: Postal Code is required)</span>
+                <span class="method-start">16897 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testInValidFormSubmission(, , , Error: First Name is required)</span>
+                <span class="method-start">18408 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">AfterClass</span>
-                <span class="method-start">10072 ms</span>
+                <span class="method-start">20001 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
