@@ -16,7 +16,7 @@ public class Navigation extends BaseTest {
             List<WebElement> productLinks = driver.findElements(By.className("inventory_item_name"));
 
             for (int i = 0; i < Math.min(6, productLinks.size()); i++) {
-                // productLinks = driver.findElements(By.className("inventory_item_name"));
+                productLinks = driver.findElements(By.className("inventory_item_name"));
                 System.out.println("Visiting product: " + productLinks.get(i).getText());
                 productLinks.get(i).click();
                 Thread.sleep(1000);
