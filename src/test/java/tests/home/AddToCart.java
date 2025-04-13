@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterTest;
 
@@ -32,7 +33,7 @@ public class AddToCart extends BaseTest {
     }
     @Test(priority = 1)
     public void VerifyCartCount(){
-        try{
+        try {
             WebElement cartBadge = driver.findElement(By.className("shopping_cart_badge"));
             String badgeText = cartBadge.getText();
             int badgeCount = Integer.parseInt(badgeText);
@@ -40,15 +41,12 @@ public class AddToCart extends BaseTest {
             System.out.println("Expected cart count: " + addedProductsCount);
             System.out.println("Cart badge shows: " + badgeCount);
 
-            if (badgeCount == addedProductsCount) {
-                System.out.println("Cart count matches the number of added products.");
-            } else {
-                System.out.println("Cart count does NOT match the number of added products.");
-            }
-
-        } catch (Exception e) {
+            Assert.assertEquals(badgeCount, addedProductsCount, "Cart count does not match number of added products!");
+        }
+        catch (Exception e) {
             System.out.println("Failed to verify cart badge.");
             e.printStackTrace();
+            Assert.fail("Exception occurred while verifying cart count.");
         }
     }
 }
