@@ -60,6 +60,7 @@
             <class name="tests.home.AddToCart">
                 <methods>
                     <include name="addProductsToCart"/>
+                    <include name="VerifyCartCount"/>
                 </methods>
             </class>
             <class name="tests.YourCartTest">
