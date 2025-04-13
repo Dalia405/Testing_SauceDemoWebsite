@@ -15,11 +15,6 @@ public class MenuTest extends BaseTest {
         HomeP=new HomePage(BaseTest.getDriver());
         HomeP.openMenu();
     }
-   // @Test(priority=2)
-    public void testCloseMenu(){
-       HomeP=new HomePage(BaseTest.getDriver());
-       HomeP.closeMenu();
-    }
     @DataProvider(name = "sidebar")
     public Object[][] sideBarPath(){
         return new Object[][]{
@@ -34,5 +29,10 @@ public class MenuTest extends BaseTest {
     public void testSideBarLinks(String idElement,String expectedUrl){
         HomeP=new HomePage(BaseTest.getDriver());
         HomeP.sideBarLinks(idElement,expectedUrl);
+    }
+    @Test(priority=3)
+    public void testCloseMenu(){
+        HomeP=new HomePage(BaseTest.getDriver());
+        HomeP.closeMenu();
     }
 }

@@ -1,17 +1,257 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="4" failed="3" skipped="0">
+<testng-results ignored="6" total="41" passed="28" failed="7" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-11T21:10:09 GMT+02:00" name="Command line suite" finished-at="2025-04-11T21:10:23 GMT+02:00" duration-ms="14235">
+  <suite started-at="2025-04-13T01:41:49 GMT+02:00" name="E-commerce Suite" finished-at="2025-04-13T01:42:47 GMT+02:00" duration-ms="57487">
     <groups>
     </groups>
-    <test started-at="2025-04-11T21:10:09 GMT+02:00" name="Command line test" finished-at="2025-04-11T21:10:23 GMT+02:00" duration-ms="14235">
+    <test started-at="2025-04-13T01:41:49 GMT+02:00" name="FirstTests" finished-at="2025-04-13T01:42:23 GMT+02:00" duration-ms="33601">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:tests.LoginTest@50de0926]" started-at="2025-04-11T21:10:01 GMT+02:00" name="BeforeClass" finished-at="2025-04-11T21:10:09 GMT+02:00" duration-ms="7590" status="PASS">
+        <test-method signature="testInValidLogin(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.LoginTest@55ca8de8]" started-at="2025-04-13T01:41:49 GMT+02:00" name="testInValidLogin" data-provider="invalidData" finished-at="2025-04-13T01:41:55 GMT+02:00" duration-ms="6032" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[😞: Username is required]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Error message does not match for locked out user expected [😞: Username is required] but found [Epic sadface: Username is required]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username is required] but found [Epic sadface: Username is required]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at pages.LoginPage.login(LoginPage.java:42)
+at tests.LoginTest.testInValidLogin(LoginTest.java:48)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at tests.TestRunner.main(TestRunner.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeClass -->
-        <test-method signature="testValidLogin(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.LoginTest@50de0926]" started-at="2025-04-11T21:10:09 GMT+02:00" name="testValidLogin" data-provider="validData" finished-at="2025-04-11T21:10:10 GMT+02:00" duration-ms="1352" status="PASS">
+        </test-method> <!-- testInValidLogin -->
+        <test-method signature="testInValidLogin(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.LoginTest@55ca8de8]" started-at="2025-04-13T01:41:55 GMT+02:00" name="testInValidLogin" data-provider="invalidData" finished-at="2025-04-13T01:41:56 GMT+02:00" duration-ms="782" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invalid_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[😞: Password is required]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Error message does not match for locked out user expected [😞: Password is required] but found [Epic sadface: Password is required]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Error message does not match for locked out user expected [😞: Password is required] but found [Epic sadface: Password is required]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at pages.LoginPage.login(LoginPage.java:42)
+at tests.LoginTest.testInValidLogin(LoginTest.java:48)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at tests.TestRunner.main(TestRunner.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInValidLogin -->
+        <test-method signature="testInValidLogin(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.LoginTest@55ca8de8]" started-at="2025-04-13T01:41:56 GMT+02:00" name="testInValidLogin" data-provider="invalidData" finished-at="2025-04-13T01:41:57 GMT+02:00" duration-ms="809" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrong_pass]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[😞: Username and password do not match any user in this service]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at pages.LoginPage.login(LoginPage.java:42)
+at tests.LoginTest.testInValidLogin(LoginTest.java:48)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at tests.TestRunner.main(TestRunner.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInValidLogin -->
+        <test-method signature="testInValidLogin(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:tests.LoginTest@55ca8de8]" started-at="2025-04-13T01:41:57 GMT+02:00" name="testInValidLogin" data-provider="invalidData" finished-at="2025-04-13T01:41:58 GMT+02:00" duration-ms="794" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[😞: Username and password do not match any user in this service]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at pages.LoginPage.login(LoginPage.java:42)
+at tests.LoginTest.testInValidLogin(LoginTest.java:48)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at tests.TestRunner.main(TestRunner.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInValidLogin -->
+        <test-method signature="testValidLogin(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.LoginTest@55ca8de8]" started-at="2025-04-13T01:41:58 GMT+02:00" name="testValidLogin" data-provider="validData" finished-at="2025-04-13T01:41:59 GMT+02:00" duration-ms="888" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,17 +272,262 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:tests.LoginTest@50de0926]" started-at="2025-04-11T21:10:23 GMT+02:00" name="AfterClass" finished-at="2025-04-11T21:10:23 GMT+02:00" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
       </class> <!-- tests.LoginTest -->
-      <class name="tests.checkout.CheckOutInfoTest">
-        <test-method signature="test()[pri:1, instance:tests.checkout.CheckOutInfoTest@17695df3]" started-at="2025-04-11T21:10:17 GMT+02:00" name="test" finished-at="2025-04-11T21:10:18 GMT+02:00" duration-ms="535" status="PASS">
+      <class name="tests.home.Navigation">
+        <test-method signature="navigateProducts()[pri:0, instance:tests.home.Navigation@3c87521]" started-at="2025-04-13T01:41:59 GMT+02:00" name="navigateProducts" finished-at="2025-04-13T01:42:01 GMT+02:00" duration-ms="2368" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.checkout.CheckOutInfoTest@17695df3]" started-at="2025-04-11T21:10:18 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-11T21:10:20 GMT+02:00" duration-ms="1687" status="FAIL">
+        </test-method> <!-- navigateProducts -->
+      </class> <!-- tests.home.Navigation -->
+      <class name="tests.home.MenuTest">
+        <test-method signature="testOpenMenu()[pri:1, instance:tests.home.MenuTest@5762806e]" started-at="2025-04-13T01:42:12 GMT+02:00" name="testOpenMenu" finished-at="2025-04-13T01:42:12 GMT+02:00" duration-ms="437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOpenMenu -->
+        <test-method signature="testSideBarLinks(java.lang.String,java.lang.String)[pri:2, instance:tests.home.MenuTest@5762806e]" started-at="2025-04-13T01:42:12 GMT+02:00" name="testSideBarLinks" data-provider="sidebar" finished-at="2025-04-13T01:42:13 GMT+02:00" duration-ms="303" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[inventory_sidebar_link]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.saucedemo.com/inventory.html]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSideBarLinks -->
+        <test-method signature="testSideBarLinks(java.lang.String,java.lang.String)[pri:2, instance:tests.home.MenuTest@5762806e]" started-at="2025-04-13T01:42:13 GMT+02:00" name="testSideBarLinks" data-provider="sidebar" finished-at="2025-04-13T01:42:22 GMT+02:00" duration-ms="9369" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[about_sidebar_link]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://saucelabs.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSideBarLinks -->
+        <test-method signature="testSideBarLinks(java.lang.String,java.lang.String)[pri:2, instance:tests.home.MenuTest@5762806e]" started-at="2025-04-13T01:42:22 GMT+02:00" name="testSideBarLinks" data-provider="sidebar" finished-at="2025-04-13T01:42:22 GMT+02:00" duration-ms="347" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[reset_sidebar_link]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.saucedemo.com/inventory.html]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSideBarLinks -->
+        <test-method signature="testSideBarLinks(java.lang.String,java.lang.String)[pri:2, instance:tests.home.MenuTest@5762806e]" started-at="2025-04-13T01:42:22 GMT+02:00" name="testSideBarLinks" data-provider="sidebar" finished-at="2025-04-13T01:42:23 GMT+02:00" duration-ms="301" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[logout_sidebar_link]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.saucedemo.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSideBarLinks -->
+      </class> <!-- tests.home.MenuTest -->
+      <class name="tests.home.FooterTest">
+        <test-method signature="testFooter(java.lang.String,java.lang.String)[pri:1, instance:tests.home.FooterTest@548a102f]" started-at="2025-04-13T01:42:11 GMT+02:00" name="testFooter" data-provider="pathSocial" finished-at="2025-04-13T01:42:11 GMT+02:00" duration-ms="463" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[//*[@id="page_wrapper"]/footer/ul/li[1]/a]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://twitter.com/saucelabs]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFooter -->
+        <test-method signature="testFooter(java.lang.String,java.lang.String)[pri:1, instance:tests.home.FooterTest@548a102f]" started-at="2025-04-13T01:42:11 GMT+02:00" name="testFooter" data-provider="pathSocial" finished-at="2025-04-13T01:42:11 GMT+02:00" duration-ms="443" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[//*[@id="page_wrapper"]/footer/ul/li[2]/a]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.facebook.com/saucelabs]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFooter -->
+        <test-method signature="testFooter(java.lang.String,java.lang.String)[pri:1, instance:tests.home.FooterTest@548a102f]" started-at="2025-04-13T01:42:11 GMT+02:00" name="testFooter" data-provider="pathSocial" finished-at="2025-04-13T01:42:12 GMT+02:00" duration-ms="513" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[//*[@id="page_wrapper"]/footer/ul/li[3]/a]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.linkedin.com/company/sauce-labs/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFooter -->
+      </class> <!-- tests.home.FooterTest -->
+      <class name="tests.home.FiltrationTest">
+        <test-method signature="testNameSorting(java.lang.String,java.lang.String)[pri:0, instance:tests.home.FiltrationTest@2aece37d]" started-at="2025-04-13T01:42:01 GMT+02:00" name="testNameSorting" data-provider="filterName" finished-at="2025-04-13T01:42:03 GMT+02:00" duration-ms="2319" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[az]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Products are not sorted by name A to Z.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNameSorting -->
+        <test-method signature="testNameSorting(java.lang.String,java.lang.String)[pri:0, instance:tests.home.FiltrationTest@2aece37d]" started-at="2025-04-13T01:42:03 GMT+02:00" name="testNameSorting" data-provider="filterName" finished-at="2025-04-13T01:42:06 GMT+02:00" duration-ms="2466" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[za]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Products are not sorted by name Z to A.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNameSorting -->
+        <test-method signature="testPriceSorting(java.lang.String,java.lang.String)[pri:0, instance:tests.home.FiltrationTest@2aece37d]" started-at="2025-04-13T01:42:06 GMT+02:00" name="testPriceSorting" data-provider="filterPrice" finished-at="2025-04-13T01:42:08 GMT+02:00" duration-ms="2401" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[lohi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Prices are not sorted from low to high.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPriceSorting -->
+        <test-method signature="testPriceSorting(java.lang.String,java.lang.String)[pri:0, instance:tests.home.FiltrationTest@2aece37d]" started-at="2025-04-13T01:42:08 GMT+02:00" name="testPriceSorting" data-provider="filterPrice" finished-at="2025-04-13T01:42:11 GMT+02:00" duration-ms="2365" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hilo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Prices are not sorted from high to low.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPriceSorting -->
+      </class> <!-- tests.home.FiltrationTest -->
+    </test> <!-- FirstTests -->
+    <test started-at="2025-04-13T01:42:23 GMT+02:00" name="SecondTests" finished-at="2025-04-13T01:42:47 GMT+02:00" duration-ms="23636">
+      <class name="tests.YourCartTest">
+        <test-method signature="testGoToYourCart()[pri:1, instance:tests.YourCartTest@7219ec67]" started-at="2025-04-13T01:42:32 GMT+02:00" name="testGoToYourCart" finished-at="2025-04-13T01:42:32 GMT+02:00" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoToYourCart -->
+        <test-method signature="testClickOnContinueShopping()[pri:2, instance:tests.YourCartTest@7219ec67]" started-at="2025-04-13T01:42:32 GMT+02:00" name="testClickOnContinueShopping" finished-at="2025-04-13T01:42:33 GMT+02:00" duration-ms="294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClickOnContinueShopping -->
+        <test-method signature="testTitleOfAllProductInCart()[pri:3, instance:tests.YourCartTest@7219ec67]" started-at="2025-04-13T01:42:33 GMT+02:00" name="testTitleOfAllProductInCart" finished-at="2025-04-13T01:42:36 GMT+02:00" duration-ms="3412" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTitleOfAllProductInCart -->
+        <test-method signature="testClickOnCheckout()[pri:5, instance:tests.YourCartTest@7219ec67]" started-at="2025-04-13T01:42:36 GMT+02:00" name="testClickOnCheckout" finished-at="2025-04-13T01:42:36 GMT+02:00" duration-ms="256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClickOnCheckout -->
+      </class> <!-- tests.YourCartTest -->
+      <class name="tests.LoginTest">
+        <test-method signature="testValidLogin(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.LoginTest@12d4bf7e]" started-at="2025-04-13T01:42:23 GMT+02:00" name="testValidLogin" data-provider="validData" finished-at="2025-04-13T01:42:24 GMT+02:00" duration-ms="775" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[https://www.saucedemo.com/inventory.html]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.checkout.CheckOutOverViewTest">
+        <test-method signature="testClickOnCancelBTN()[pri:1, instance:tests.checkout.CheckOutOverViewTest@65d6b83b]" started-at="2025-04-13T01:42:43 GMT+02:00" name="testClickOnCancelBTN" finished-at="2025-04-13T01:42:43 GMT+02:00" duration-ms="242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testClickOnCancelBTN -->
+        <test-method signature="testCartCalculations()[pri:2, instance:tests.checkout.CheckOutOverViewTest@65d6b83b]" started-at="2025-04-13T01:42:43 GMT+02:00" name="testCartCalculations" finished-at="2025-04-13T01:42:44 GMT+02:00" duration-ms="403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCartCalculations -->
+        <test-method signature="testTitleOfAllProductInCart()[pri:3, instance:tests.checkout.CheckOutOverViewTest@65d6b83b]" started-at="2025-04-13T01:42:44 GMT+02:00" name="testTitleOfAllProductInCart" finished-at="2025-04-13T01:42:47 GMT+02:00" duration-ms="2944" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTitleOfAllProductInCart -->
+      </class> <!-- tests.checkout.CheckOutOverViewTest -->
+      <class name="tests.checkout.CheckOutInfoTest">
+        <test-method signature="testGoBack()[pri:2, instance:tests.checkout.CheckOutInfoTest@45018215]" started-at="2025-04-13T01:42:36 GMT+02:00" name="testGoBack" finished-at="2025-04-13T01:42:37 GMT+02:00" duration-ms="309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoBack -->
+        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.checkout.CheckOutInfoTest@45018215]" started-at="2025-04-13T01:42:37 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-13T01:42:38 GMT+02:00" duration-ms="1363" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -75,7 +560,7 @@ at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertFalse(Assert.java:79)
 at pages.checkout.CheckOutInfoPage.inValidFormSubmission(CheckOutInfoPage.java:82)
-at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:54)
+at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -99,14 +584,14 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 at org.testng.TestNG.runSuites(TestNG.java:1112)
 at org.testng.TestNG.run(TestNG.java:1079)
-at tests.TestRunner.main(TestRunner.java:25)
+at tests.TestRunner.main(TestRunner.java:27)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInValidFormSubmission -->
-        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.checkout.CheckOutInfoTest@17695df3]" started-at="2025-04-11T21:10:20 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-11T21:10:21 GMT+02:00" duration-ms="1164" status="FAIL">
+        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.checkout.CheckOutInfoTest@45018215]" started-at="2025-04-13T01:42:38 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-13T01:42:39 GMT+02:00" duration-ms="1411" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -139,7 +624,7 @@ at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertFalse(Assert.java:79)
 at pages.checkout.CheckOutInfoPage.inValidFormSubmission(CheckOutInfoPage.java:76)
-at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:54)
+at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -163,14 +648,14 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 at org.testng.TestNG.runSuites(TestNG.java:1112)
 at org.testng.TestNG.run(TestNG.java:1079)
-at tests.TestRunner.main(TestRunner.java:25)
+at tests.TestRunner.main(TestRunner.java:27)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInValidFormSubmission -->
-        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.checkout.CheckOutInfoTest@17695df3]" started-at="2025-04-11T21:10:21 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-11T21:10:22 GMT+02:00" duration-ms="1060" status="FAIL">
+        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.checkout.CheckOutInfoTest@45018215]" started-at="2025-04-13T01:42:39 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-13T01:42:41 GMT+02:00" duration-ms="1299" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -203,7 +688,7 @@ at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertFalse(Assert.java:79)
 at pages.checkout.CheckOutInfoPage.inValidFormSubmission(CheckOutInfoPage.java:76)
-at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:54)
+at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -227,14 +712,14 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 at org.testng.TestNG.runSuites(TestNG.java:1112)
 at org.testng.TestNG.run(TestNG.java:1079)
-at tests.TestRunner.main(TestRunner.java:25)
+at tests.TestRunner.main(TestRunner.java:27)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInValidFormSubmission -->
-        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:tests.checkout.CheckOutInfoTest@17695df3]" started-at="2025-04-11T21:10:22 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-11T21:10:23 GMT+02:00" duration-ms="1021" status="PASS">
+        <test-method signature="testInValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:tests.checkout.CheckOutInfoTest@45018215]" started-at="2025-04-13T01:42:41 GMT+02:00" name="testInValidFormSubmission" data-provider="invalidData" finished-at="2025-04-13T01:42:42 GMT+02:00" duration-ms="1136" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -260,13 +745,49 @@ at tests.TestRunner.main(TestRunner.java:25)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInValidFormSubmission -->
+        <test-method signature="testValidFormSubmission(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:tests.checkout.CheckOutInfoTest@45018215]" started-at="2025-04-13T01:42:42 GMT+02:00" name="testValidFormSubmission" data-provider="validData" finished-at="2025-04-13T01:42:43 GMT+02:00" duration-ms="1148" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test first]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test last]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://www.saucedemo.com/checkout-step-two.html]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidFormSubmission -->
       </class> <!-- tests.checkout.CheckOutInfoTest -->
+      <class name="tests.home.MenuTest">
+        <test-method signature="testOpenMenu()[pri:1, instance:tests.home.MenuTest@4c1d9d4b]" started-at="2025-04-13T01:42:24 GMT+02:00" name="testOpenMenu" finished-at="2025-04-13T01:42:24 GMT+02:00" duration-ms="344" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOpenMenu -->
+        <test-method signature="testCloseMenu()[pri:3, instance:tests.home.MenuTest@4c1d9d4b]" started-at="2025-04-13T01:42:24 GMT+02:00" name="testCloseMenu" finished-at="2025-04-13T01:42:25 GMT+02:00" duration-ms="887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCloseMenu -->
+      </class> <!-- tests.home.MenuTest -->
       <class name="tests.home.AddToCart">
-        <test-method signature="addProductsToCart()[pri:0, instance:tests.home.AddToCart@71d15f18]" started-at="2025-04-11T21:10:10 GMT+02:00" name="addProductsToCart" finished-at="2025-04-11T21:10:17 GMT+02:00" duration-ms="7292" status="PASS">
+        <test-method signature="addProductsToCart()[pri:0, instance:tests.home.AddToCart@7b227d8d]" started-at="2025-04-13T01:42:25 GMT+02:00" name="addProductsToCart" finished-at="2025-04-13T01:42:32 GMT+02:00" duration-ms="7188" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductsToCart -->
       </class> <!-- tests.home.AddToCart -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+    </test> <!-- SecondTests -->
+  </suite> <!-- E-commerce Suite -->
 </testng-results>

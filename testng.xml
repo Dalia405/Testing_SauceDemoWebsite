@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="E-commerce Suite" >
+    <test name="FirstTests">
+        <groups>
+            <run>
+                <include name="first"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="testInValidLogin"/>
+                    <include name="testValidLogin"/>
+                </methods>
+            </class>
+            <class name="tests.home.Navigation">
+                <methods>
+                    <include name="navigateProducts"/>
+                </methods>
+            </class>
+            <class name="tests.home.FiltrationTest">
+                <methods>
+                    <include name="testNameSorting"/>
+                    <include name="testPriceSorting"/>
+                </methods>
+            </class>
+            <class name="tests.home.FooterTest">
+                <methods>
+                    <include name="testFooter"/>
+                </methods>
+            </class>
+            <class name="tests.home.MenuTest">
+                <methods>
+                    <include name="testOpenMenu"/>
+                    <include name="testSideBarLinks"/>
+                </methods>
+            </class>
+         </classes>
+    </test>
+
+    <test name="SecondTests">
+        <groups>
+            <run>
+                <include name="second"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="testValidLogin"/>
+                </methods>
+            </class>
+            <class name="tests.home.MenuTest">
+                <methods>
+                    <include name="testOpenMenu"/>
+                    <include name="testCloseMenu"/>
+                </methods>
+            </class>
+            <class name="tests.home.AddToCart">
+                <methods>
+                    <include name="addProductsToCart"/>
+                </methods>
+            </class>
+            <class name="tests.YourCartTest">
+                <methods>
+                    <include name="testGoToYourCart"/>
+                    <include name="testClickOnContinueShopping"/>
+                    <include name="testTitleOfAllProductInCart"/>
+<!--                    <include name="testRemoveOneCart"/>-->
+<!--                    <include name="testRemoveCart"/>-->
+                    <include name="testClickOnCheckout"/>
+                </methods>
+            </class>
+            <class name="tests.checkout.CheckOutInfoTest">
+                <methods>
+                    <include name="testGoBack"/>
+                    <include name="testInValidFormSubmission"/>
+                    <include name="testValidFormSubmission"/>
+                </methods>
+            </class>
+            <class name="tests.checkout.CheckOutOverViewTest">
+                <methods>
+                    <include name="testClickOnCancelBTN"/>
+                    <include name="testCartCalculations"/>
+                    <include name="testTitleOfAllProductInCart"/>
+                    <include name="testClickOnFinishBTN"/>
+                </methods>
+            </class>
+            <class name="tests.checkout.CheckOutCompleteTest">
+                <methods>
+<!--                    <include name="testClickOnCancelBTN"/>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

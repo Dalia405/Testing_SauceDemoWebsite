@@ -1,26 +1,21 @@
 package tests.checkout;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.checkout.CheckOutInfoPage;
 import tests.base.BaseTest;
-import org.openqa.selenium.Keys;
-
 import java.time.Duration;
-import java.util.List;
 
 public class CheckOutInfoTest extends BaseTest {
     CheckOutInfoPage CheckOutInfoP;
     WebDriverWait wait;
     /*RUKA*/
     @Test(priority = 1)
-    public void test(){
-        BaseTest.getDriver().findElement(By.className("shopping_cart_link")).click();
+    public void testGoToCheckOut(){
+//            BaseTest.getDriver().findElement(By.className("shopping_cart_link")).click();
             wait = new WebDriverWait(BaseTest.getDriver(), Duration.ofSeconds(10));
             wait.until(ExpectedConditions.elementToBeClickable(By.id("checkout"))).click();
         }
@@ -33,7 +28,7 @@ public class CheckOutInfoTest extends BaseTest {
                 {"test first", "test last", "12345", "https://www.saucedemo.com/checkout-step-two.html"},
         };
     }
-   // @Test(priority = 2, dataProvider = "validData")
+    @Test(priority = 4, dataProvider = "validData")
     public void testValidFormSubmission(String firstName, String lastName, String postalCode, String expectedURL) {
        CheckOutInfoP=new CheckOutInfoPage(BaseTest.getDriver());
        CheckOutInfoP.validFormSubmission(firstName,lastName,postalCode,expectedURL);
@@ -48,15 +43,16 @@ public class CheckOutInfoTest extends BaseTest {
                 {"", "", "", "Error: First Name is required"}, // First Name is required shown first
         };
     }
-    @Test(priority = 2, dataProvider = "invalidData")
+    @Test(priority = 3, dataProvider = "invalidData")
     public void testInValidFormSubmission(String firstName, String lastName, String postalCode, String expectedError) {
         CheckOutInfoP=new CheckOutInfoPage(BaseTest.getDriver());
         CheckOutInfoP.inValidFormSubmission(firstName,lastName,postalCode,expectedError);
     }
-    //@Test(priority = 2)
+    @Test(priority = 2)
     public void testGoBack(){
         CheckOutInfoP=new CheckOutInfoPage(BaseTest.getDriver());
-        CheckOutInfoP. goBack();
+        CheckOutInfoP.goBack();
+        BaseTest.getDriver().navigate().back();
     }
 
 }

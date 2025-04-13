@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/13/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Apr 11 21:10:09 GMT+02:00 2025</td>
+<td>Started on:</td><td>Sun Apr 13 00:24:45 GMT+02:00 2025</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14235 ms)</td>
+<tr><td>Total time:</td><td>82 seconds (82884 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,19 +76,21 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.checkout.CheckOutInfoTest.testInValidFormSubmission()'><b>testInValidFormSubmission</b><br>Test class: tests.checkout.CheckOutInfoTest<br>Parameters: First, , 12345, Error: Last Name is required</td>
-<td><div><pre>java.lang.AssertionError: First Name error icon should NOT be visible expected [false] but found [true]
-	at pages.checkout.CheckOutInfoPage.inValidFormSubmission(CheckOutInfoPage.java:76)
-	at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:54)
+<td title='tests.LoginTest.testInValidLogin()'><b>testInValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: test, 1234, 😞: Username and password do not match any user in this service</td>
+<td><div><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
+	at pages.LoginPage.login(LoginPage.java:42)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:48)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at tests.TestRunner.main(TestRunner.java:25)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1846982837", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1846982837'><pre>java.lang.AssertionError: First Name error icon should NOT be visible expected [false] but found [true]
+	at tests.TestRunner.main(TestRunner.java:36)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace95369743", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace95369743'><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertFalse(Assert.java:79)
-	at pages.checkout.CheckOutInfoPage.inValidFormSubmission(CheckOutInfoPage.java:76)
-	at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:54)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at pages.LoginPage.login(LoginPage.java:42)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:48)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -112,24 +114,49 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 	at org.testng.TestNG.runSuites(TestNG.java:1112)
 	at org.testng.TestNG.run(TestNG.java:1079)
-	at tests.TestRunner.main(TestRunner.java:25)
+	at tests.TestRunner.main(TestRunner.java:36)
 </pre></div></td>
-<td>1</td>
-<td>tests.checkout.CheckOutInfoTest@17695df3</td></tr>
+<td>0</td>
+<td>tests.LoginTest@2f0a87b3</td></tr>
 <tr>
-<td title='tests.checkout.CheckOutInfoTest.testInValidFormSubmission()'><b>testInValidFormSubmission</b><br>Test class: tests.checkout.CheckOutInfoTest<br>Parameters: , Last, 12345, Error: First Name is required</td>
-<td><div><pre>java.lang.AssertionError: Last Name error icon should NOT be visible expected [false] but found [true]
-	at pages.checkout.CheckOutInfoPage.inValidFormSubmission(CheckOutInfoPage.java:82)
-	at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:54)
+<td title='tests.home.MenuTest.testSideBarLinks()'><b>testSideBarLinks</b><br>Test class: tests.home.MenuTest<br>Parameters: logout_sidebar_link, https://www.saucedemo.com/</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: logout_sidebar_link (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.home.HomePage.sideBarLinks(HomePage.java:60)
+	at tests.home.MenuTest.testSideBarLinks(MenuTest.java:31)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at tests.TestRunner.main(TestRunner.java:25)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace911501858", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace911501858'><pre>java.lang.AssertionError: Last Name error icon should NOT be visible expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertFalse(Assert.java:79)
-	at pages.checkout.CheckOutInfoPage.inValidFormSubmission(CheckOutInfoPage.java:82)
-	at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:54)
+	at tests.TestRunner.main(TestRunner.java:36)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=id, value=logout_sidebar_link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace918307166", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace918307166'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: logout_sidebar_link (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.home.HomePage.sideBarLinks(HomePage.java:60)
+	at tests.home.MenuTest.testSideBarLinks(MenuTest.java:31)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -153,24 +180,76 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 	at org.testng.TestNG.runSuites(TestNG.java:1112)
 	at org.testng.TestNG.run(TestNG.java:1079)
-	at tests.TestRunner.main(TestRunner.java:25)
+	at tests.TestRunner.main(TestRunner.java:36)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=id, value=logout_sidebar_link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
 </pre></div></td>
-<td>1</td>
-<td>tests.checkout.CheckOutInfoTest@17695df3</td></tr>
+<td>10</td>
+<td>tests.home.MenuTest@2fd66ad3</td></tr>
 <tr>
-<td title='tests.checkout.CheckOutInfoTest.testInValidFormSubmission()'><b>testInValidFormSubmission</b><br>Test class: tests.checkout.CheckOutInfoTest<br>Parameters: First, Last, , Error: Postal Code is required</td>
-<td><div><pre>java.lang.AssertionError: First Name error icon should NOT be visible expected [false] but found [true]
-	at pages.checkout.CheckOutInfoPage.inValidFormSubmission(CheckOutInfoPage.java:76)
-	at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:54)
+<td title='tests.home.MenuTest.testSideBarLinks()'><b>testSideBarLinks</b><br>Test class: tests.home.MenuTest<br>Parameters: inventory_sidebar_link, https://www.saucedemo.com/inventory.html</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: inventory_sidebar_link (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.home.HomePage.sideBarLinks(HomePage.java:60)
+	at tests.home.MenuTest.testSideBarLinks(MenuTest.java:31)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at tests.TestRunner.main(TestRunner.java:25)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1648458262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1648458262'><pre>java.lang.AssertionError: First Name error icon should NOT be visible expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertFalse(Assert.java:79)
-	at pages.checkout.CheckOutInfoPage.inValidFormSubmission(CheckOutInfoPage.java:76)
-	at tests.checkout.CheckOutInfoTest.testInValidFormSubmission(CheckOutInfoTest.java:54)
+	at tests.TestRunner.main(TestRunner.java:36)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=id, value=inventory_sidebar_link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1009326765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1009326765'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: inventory_sidebar_link (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.home.HomePage.sideBarLinks(HomePage.java:60)
+	at tests.home.MenuTest.testSideBarLinks(MenuTest.java:31)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -194,10 +273,777 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 	at org.testng.TestNG.runSuites(TestNG.java:1112)
 	at org.testng.TestNG.run(TestNG.java:1079)
-	at tests.TestRunner.main(TestRunner.java:25)
+	at tests.TestRunner.main(TestRunner.java:36)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=id, value=inventory_sidebar_link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
+</pre></div></td>
+<td>10</td>
+<td>tests.home.MenuTest@2fd66ad3</td></tr>
+<tr>
+<td title='tests.home.FooterTest.testFooter()'><b>testFooter</b><br>Test class: tests.home.FooterTest<br>Parameters: //*[@id="page_wrapper"]/footer/ul/li[1]/a, https://twitter.com/saucelabs</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=xpath, value=//*[@id=&quot;page_wrapper&quot;]/footer/ul/li[1]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at tests.home.FooterTest.testFooter(FooterTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:36)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace388802347", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace388802347'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=xpath, value=//*[@id=&quot;page_wrapper&quot;]/footer/ul/li[1]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at tests.home.FooterTest.testFooter(FooterTest.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at tests.TestRunner.main(TestRunner.java:36)
+</pre></div></td>
+<td>0</td>
+<td>tests.home.FooterTest@376b4233</td></tr>
+<tr>
+<td title='tests.home.MenuTest.testSideBarLinks()'><b>testSideBarLinks</b><br>Test class: tests.home.MenuTest<br>Parameters: reset_sidebar_link, https://www.saucedemo.com/inventory.html</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: reset_sidebar_link (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.home.HomePage.sideBarLinks(HomePage.java:60)
+	at tests.home.MenuTest.testSideBarLinks(MenuTest.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:36)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=id, value=reset_sidebar_link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1447685190", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1447685190'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: reset_sidebar_link (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.home.HomePage.sideBarLinks(HomePage.java:60)
+	at tests.home.MenuTest.testSideBarLinks(MenuTest.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at tests.TestRunner.main(TestRunner.java:36)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=id, value=reset_sidebar_link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
+</pre></div></td>
+<td>10</td>
+<td>tests.home.MenuTest@2fd66ad3</td></tr>
+<tr>
+<td title='tests.home.MenuTest.testCloseMenu()'><b>testCloseMenu</b><br>Test class: tests.home.MenuTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: react-burger-cross-btn (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.home.HomePage.closeMenu(HomePage.java:46)
+	at tests.home.MenuTest.testCloseMenu(MenuTest.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:36)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=id, value=react-burger-cross-btn}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1206946689", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1206946689'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: react-burger-cross-btn (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.home.HomePage.closeMenu(HomePage.java:46)
+	at tests.home.MenuTest.testCloseMenu(MenuTest.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at tests.TestRunner.main(TestRunner.java:36)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=id, value=react-burger-cross-btn}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
+</pre></div></td>
+<td>10</td>
+<td>tests.home.MenuTest@2fd66ad3</td></tr>
+<tr>
+<td title='tests.LoginTest.testInValidLogin()'><b>testInValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: , , 😞: Username is required</td>
+<td><div><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username is required] but found [Epic sadface: Username is required]
+	at pages.LoginPage.login(LoginPage.java:42)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:36)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace711197015", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace711197015'><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username is required] but found [Epic sadface: Username is required]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at pages.LoginPage.login(LoginPage.java:42)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:48)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at tests.TestRunner.main(TestRunner.java:36)
+</pre></div></td>
+<td>7</td>
+<td>tests.LoginTest@2f0a87b3</td></tr>
+<tr>
+<td title='tests.LoginTest.testInValidLogin()'><b>testInValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: invalid_user, , 😞: Password is required</td>
+<td><div><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Password is required] but found [Epic sadface: Password is required]
+	at pages.LoginPage.login(LoginPage.java:42)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:36)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2052457859", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2052457859'><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Password is required] but found [Epic sadface: Password is required]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at pages.LoginPage.login(LoginPage.java:42)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:48)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at tests.TestRunner.main(TestRunner.java:36)
+</pre></div></td>
+<td>0</td>
+<td>tests.LoginTest@2f0a87b3</td></tr>
+<tr>
+<td title='tests.home.MenuTest.testOpenMenu()'><b>testOpenMenu</b><br>Test class: tests.home.MenuTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: react-burger-menu-btn (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.home.HomePage.openMenu(HomePage.java:32)
+	at tests.home.MenuTest.testOpenMenu(MenuTest.java:16)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:36)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=id, value=react-burger-menu-btn}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2032647583", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2032647583'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: react-burger-menu-btn (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.home.HomePage.openMenu(HomePage.java:32)
+	at tests.home.MenuTest.testOpenMenu(MenuTest.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at tests.TestRunner.main(TestRunner.java:36)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=id, value=react-burger-menu-btn}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
+</pre></div></td>
+<td>10</td>
+<td>tests.home.MenuTest@2fd66ad3</td></tr>
+<tr>
+<td title='tests.home.FooterTest.testFooter()'><b>testFooter</b><br>Test class: tests.home.FooterTest<br>Parameters: //*[@id="page_wrapper"]/footer/ul/li[3]/a, https://www.linkedin.com/company/sauce-labs/</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=xpath, value=//*[@id=&quot;page_wrapper&quot;]/footer/ul/li[3]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at tests.home.FooterTest.testFooter(FooterTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:36)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace905847077", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace905847077'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=xpath, value=//*[@id=&quot;page_wrapper&quot;]/footer/ul/li[3]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at tests.home.FooterTest.testFooter(FooterTest.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at tests.TestRunner.main(TestRunner.java:36)
+</pre></div></td>
+<td>0</td>
+<td>tests.home.FooterTest@376b4233</td></tr>
+<tr>
+<td title='tests.LoginTest.testInValidLogin()'><b>testInValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: standard_user, wrong_pass, 😞: Username and password do not match any user in this service</td>
+<td><div><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
+	at pages.LoginPage.login(LoginPage.java:42)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:36)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1561745898", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1561745898'><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at pages.LoginPage.login(LoginPage.java:42)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:48)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at tests.TestRunner.main(TestRunner.java:36)
 </pre></div></td>
 <td>1</td>
-<td>tests.checkout.CheckOutInfoTest@17695df3</td></tr>
+<td>tests.LoginTest@2f0a87b3</td></tr>
+<tr>
+<td title='tests.home.FooterTest.testFooter()'><b>testFooter</b><br>Test class: tests.home.FooterTest<br>Parameters: //*[@id="page_wrapper"]/footer/ul/li[2]/a, https://www.facebook.com/saucelabs</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=xpath, value=//*[@id=&quot;page_wrapper&quot;]/footer/ul/li[2]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at tests.home.FooterTest.testFooter(FooterTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:36)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace100445376", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace100445376'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=xpath, value=//*[@id=&quot;page_wrapper&quot;]/footer/ul/li[2]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at tests.home.FooterTest.testFooter(FooterTest.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at tests.TestRunner.main(TestRunner.java:36)
+</pre></div></td>
+<td>0</td>
+<td>tests.home.FooterTest@376b4233</td></tr>
+<tr>
+<td title='tests.home.MenuTest.testSideBarLinks()'><b>testSideBarLinks</b><br>Test class: tests.home.MenuTest<br>Parameters: about_sidebar_link, https://saucelabs.com/</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: about_sidebar_link (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.home.HomePage.sideBarLinks(HomePage.java:60)
+	at tests.home.MenuTest.testSideBarLinks(MenuTest.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:36)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=id, value=about_sidebar_link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1565713391", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1565713391'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: about_sidebar_link (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.home.HomePage.sideBarLinks(HomePage.java:60)
+	at tests.home.MenuTest.testSideBarLinks(MenuTest.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at tests.TestRunner.main(TestRunner.java:36)
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25e0bd6d66a6ebc8da54a8fe09a4323f, findElement {using=id, value=about_sidebar_link}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.84 (6c019e560019..., userDataDir: C:\Users\ITI\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61136}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61136/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 25e0bd6d66a6ebc8da54a8fe09a4323f
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 26 more
+</pre></div></td>
+<td>10</td>
+<td>tests.home.MenuTest@2fd66ad3</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -208,25 +1054,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.checkout.CheckOutInfoTest.testInValidFormSubmission()'><b>testInValidFormSubmission</b><br>Test class: tests.checkout.CheckOutInfoTest<br>Parameters: , , , Error: First Name is required</td>
+<td title='tests.home.FiltrationTest.testNameSorting()'><b>testNameSorting</b><br>Test class: tests.home.FiltrationTest<br>Parameters: az, Products are not sorted by name A to Z.</td>
 <td></td>
-<td>1</td>
-<td>tests.checkout.CheckOutInfoTest@17695df3</td></tr>
+<td>2</td>
+<td>tests.home.FiltrationTest@4fcd19b3</td></tr>
+<tr>
+<td title='tests.home.FiltrationTest.testNameSorting()'><b>testNameSorting</b><br>Test class: tests.home.FiltrationTest<br>Parameters: za, Products are not sorted by name Z to A.</td>
+<td></td>
+<td>2</td>
+<td>tests.home.FiltrationTest@4fcd19b3</td></tr>
+<tr>
+<td title='tests.home.FiltrationTest.testPriceSorting()'><b>testPriceSorting</b><br>Test class: tests.home.FiltrationTest<br>Parameters: lohi, Prices are not sorted from low to high.</td>
+<td></td>
+<td>2</td>
+<td>tests.home.FiltrationTest@4fcd19b3</td></tr>
 <tr>
 <td title='tests.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: standard_user, secret_sauce, https://www.saucedemo.com/inventory.html</td>
 <td></td>
-<td>1</td>
-<td>tests.LoginTest@50de0926</td></tr>
-<tr>
-<td title='tests.checkout.CheckOutInfoTest.test()'><b>test</b><br>Test class: tests.checkout.CheckOutInfoTest</td>
-<td></td>
 <td>0</td>
-<td>tests.checkout.CheckOutInfoTest@17695df3</td></tr>
+<td>tests.LoginTest@2f0a87b3</td></tr>
 <tr>
-<td title='tests.home.AddToCart.addProductsToCart()'><b>addProductsToCart</b><br>Test class: tests.home.AddToCart</td>
+<td title='tests.home.FiltrationTest.testPriceSorting()'><b>testPriceSorting</b><br>Test class: tests.home.FiltrationTest<br>Parameters: hilo, Prices are not sorted from high to low.</td>
 <td></td>
-<td>7</td>
-<td>tests.home.AddToCart@71d15f18</td></tr>
+<td>2</td>
+<td>tests.home.FiltrationTest@4fcd19b3</td></tr>
 </table><p>
 </body>
 </html>

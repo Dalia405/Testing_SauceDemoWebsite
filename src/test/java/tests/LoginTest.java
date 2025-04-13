@@ -1,5 +1,6 @@
 package tests;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -19,12 +20,17 @@ public class LoginTest extends BaseTest {
 //                {"visual_user","secret_sauce","https://www.saucedemo.com/inventory.html"},
         };
     }
-    @Test(priority=1,dataProvider = "validData")
+    @Test(priority=2,dataProvider = "validData")
     public void testValidLogin(String userName,String password,String expectedResult){
+        //WebDriver driver = BaseTest.getDriver(); // Now always initialized
+        // Use driver safely
+        System.out.println(BaseTest.getDriver());
         LoginP =new LoginPage(BaseTest.getDriver());
         LoginP.login(userName,password,expectedResult);
         //driver.navigate().back();
     }
+
+
 
     //InValid
     @DataProvider(name = "invalidData")
@@ -36,7 +42,7 @@ public class LoginTest extends BaseTest {
                 {"test", "1234","\uD83D\uDE1E: Username and password do not match any user in this service"}                  // completely invalid
         };
     }
-    //@Test(priority=1,dataProvider = "invalidData")
+    @Test(priority=1,dataProvider = "invalidData")
     public void testInValidLogin(String userName,String password,String expectedResult){
         LoginP =new LoginPage(BaseTest.getDriver());
         LoginP.login(userName,password,expectedResult);

@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Command line suite]">
-  <test thread-count="5" name="Command line test(failed)">
+<suite name="Failed suite [E-commerce Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="FirstTests(failed)">
+    <groups>
+      <run>
+        <include name="first"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="testInValidLogin" invocation-numbers="0 1 2 3"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- FirstTests(failed) -->
+  <test thread-count="5" name="SecondTests(failed)">
+    <groups>
+      <run>
+        <include name="second"/>
+      </run>
+    </groups>
     <classes>
       <class name="tests.checkout.CheckOutInfoTest">
         <methods>
-          <include name="AfterClass"/>
-          <include name="BeforeClass"/>
           <include name="testInValidFormSubmission" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- tests.checkout.CheckOutInfoTest -->
     </classes>
-  </test> <!-- Command line test(failed) -->
-</suite> <!-- Failed suite [Command line suite] -->
+  </test> <!-- SecondTests(failed) -->
+</suite> <!-- Failed suite [E-commerce Suite] -->

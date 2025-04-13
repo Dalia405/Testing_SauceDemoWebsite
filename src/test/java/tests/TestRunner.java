@@ -1,24 +1,26 @@
 package tests;
 
 import listeners.TestListener;
+import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 import tests.checkout.CheckOutInfoTest;
+import tests.checkout.CheckOutOverViewTest;
 import tests.home.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestRunner {
     public static void main(String[] args) {
         TestNG testng = new TestNG();
-        // Add test classes to run
-        testng.setTestClasses(new Class[]{
-                LoginTest.class,
-               // FooterTest.class,
-                AddToCart.class,
-               // MenuTest.class,
-                //FiltrationTest.class
-               // Navigation.class
+        TestListenerAdapter tla = new TestListenerAdapter();
 
-                CheckOutInfoTest.class
-        });
+        List<String> suites = new ArrayList<>();
+        suites.add("testng.xml"); // path to your testng.xml file
+
+        testng.setTestSuites(suites);
+        testng.addListener(tla);
+
         // Add custom listener
         testng.addListener(new TestListener());
         // Run tests what is important
