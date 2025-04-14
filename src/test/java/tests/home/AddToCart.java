@@ -24,6 +24,7 @@ public class AddToCart extends BaseTest {
                 addedProductsCount++;
                 Thread.sleep(1000);
             }
+            verifyButtonsSwitchedToRemove(addedProductsCount);
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("window.scrollTo(0, 0);");
         }
@@ -32,6 +33,20 @@ public class AddToCart extends BaseTest {
         }
     }
     @Test(priority = 1)
+    public void verifyButtonsSwitchedToRemove(int expectedCount) {
+        List<WebElement> removeButtons = driver.findElements(By.xpath("//button[text()='Remove']"));
+        Assert.assertEquals(removeButtons.size(), expectedCount, "Mismatch in number of 'Remove' buttons.");
+
+        for (int i = 0; i < removeButtons.size(); i++) {
+            WebElement button = removeButtons.get(i);
+            Assert.assertEquals(button.getText(), "Remove", "Button at index " + i + " did not switch to 'Remove'");
+        }
+
+        System.out.println("All " + expectedCount + " buttons switched to 'Remove' successfully.");
+    }
+
+
+    @Test(priority = 2)
     public void VerifyCartCount(){
         try {
             WebElement cartBadge = driver.findElement(By.className("shopping_cart_badge"));
