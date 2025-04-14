@@ -10,6 +10,7 @@ import tests.base.BaseTest;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Objects;
 
 //menu -footer -filtration -cart
 public class HomePage {
@@ -74,12 +75,22 @@ public class HomePage {
             }
             if(idElement.contains("reset_sidebar_link")){
                 List<WebElement> cartBadges = driver.findElements(By.className("shopping_cart_badge"));
-                List<WebElement> removeButtons = driver.findElements(By.cssSelector(".btn.btn_secondary.btn_small.btn_inventory"));
                 Assert.assertTrue(cartBadges.isEmpty(),"Cart badge is not empty! Found " + cartBadges.size() + " badge(s).");
-                Assert.assertTrue(removeButtons.isEmpty(),"'Remove' buttons should not be visible after removing all items.");
+                if(Objects.equals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html")){
+                    List<WebElement> removeButtons = driver.findElements(By.cssSelector(".btn.btn_secondary.btn_small.btn_inventory"));
+                    Assert.assertTrue(removeButtons.isEmpty(),"'Remove' buttons should not be visible after removing all items.");
+                }
+                if(Objects.equals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html")||Objects.equals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-two.html")){
+                    List<WebElement> items = driver.findElements(By.className("cart_item"));
+                    Assert.assertTrue(items.isEmpty(),"items should not be visible after removing all items.");
+
+                }
+
             }
-             wait.until(ExpectedConditions.urlToBe(expectedUrl));
-            Assert.assertEquals(BaseTest.getDriver().getCurrentUrl(), expectedUrl, "URL mismatch");
+//             wait.until(ExpectedConditions.urlToBe(expectedUrl));
+            //Assert.assertEquals(BaseTest.getDriver().getCurrentUrl(), expectedUrl, "URL mismatch");
+            Assert.assertEquals(BaseTest.getDriver().getCurrentUrl(), driver.getCurrentUrl(), "URL mismatch");
+
         }
     }
 

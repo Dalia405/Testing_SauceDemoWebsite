@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="menu" >
+
+<test name="SecondPageMenuTests">
+    <groups>
+        <run>
+            <include name="second"/>
+        </run>
+    </groups>
+    <classes>
+        <class name="tests.LoginTest">
+            <methods>
+                <include name="testValidLogin"/>
+            </methods>
+        </class>
+        <class name="tests.home.AddToCart">
+            <methods>
+                <include name="addProductsToCart"/>
+            </methods>
+        </class>
+
+        <class name="tests.YourCartTest">
+            <methods>
+                <include name="testGoToYourCart"/>
+                <!--                <include name="testClickOnCheckout"/>-->
+            </methods>
+        </class>
+        <class name="tests.home.MenuTest">
+            <methods>
+                <include name="testOpenMenu"/>
+                <include name="testMenuExistAllPages"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+
+<test name="ThirdPageMenuTests">
+    <groups>
+        <run>
+            <include name="third"/>
+        </run>
+    </groups>
+    <classes>
+        <!--        <class name="tests.LoginTest">-->
+        <!--            <methods>-->
+        <!--                <include name="testGotTOHomePage"/>-->
+        <!--            </methods>-->
+        <!--        </class>-->
+        <class name="tests.home.AddToCart">
+            <methods>
+                <include name="addProductsToCart"/>
+            </methods>
+        </class>
+
+        <class name="tests.YourCartTest">
+            <methods>
+                <include name="testGoToYourCart"/>
+                <include name="testClickOnCheckout"/>
+            </methods>
+        </class>
+        <class name="tests.home.MenuTest">
+            <methods>
+                <include name="testOpenMenu"/>
+                <include name="testMenuExistAllPages"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+
+<test name="FourthPageMenuTests">
+    <groups>
+        <run>
+            <include name="fourth"/>
+        </run>
+    </groups>
+    <classes>
+        <class name="tests.home.AddToCart">
+            <methods>
+                <include name="addProductsToCart"/>
+            </methods>
+        </class>
+
+        <class name="tests.YourCartTest">
+            <methods>
+                <include name="testGoToYourCart"/>
+                <include name="testClickOnCheckout"/>
+            </methods>
+        </class>
+        <class name="tests.checkout.CheckOutInfoTest">
+            <methods>
+                <include name="testValidFormSubmission"/>
+            </methods>
+        </class>
+        <class name="tests.home.MenuTest">
+            <methods>
+                <include name="testOpenMenu"/>
+                <include name="testMenuExistAllPages"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+
+<!-- Cleanup test at the end -->
+<test name="CleanupTest">
+    <classes>
+        <class name="tests.TestCleanup"/>
+    </classes>
+</test>
+
+</suite>
+
+

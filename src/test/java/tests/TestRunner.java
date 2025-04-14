@@ -3,10 +3,6 @@ package tests;
 import listeners.TestListener;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
-import tests.checkout.CheckOutInfoTest;
-import tests.checkout.CheckOutOverViewTest;
-import tests.home.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +13,8 @@ public class TestRunner {
 
         List<String> suites = new ArrayList<>();
         suites.add("testng.xml"); // path to your testng.xml file
+       // suites.add("testngMenu.xml");
+
 
         testng.setTestSuites(suites);
         testng.addListener(tla);

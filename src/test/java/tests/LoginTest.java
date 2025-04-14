@@ -30,8 +30,6 @@ public class LoginTest extends BaseTest {
         //driver.navigate().back();
     }
 
-
-
     //InValid
     @DataProvider(name = "invalidData")
     public Object[][] invalidTestData(){
@@ -47,5 +45,10 @@ public class LoginTest extends BaseTest {
         LoginP =new LoginPage(BaseTest.getDriver());
         LoginP.login(userName,password,expectedResult);
         //driver.navigate().back();
+    }
+
+    @Test
+    public void testGotTOHomePage(){
+        BaseTest.getDriver().get("https://www.saucedemo.com/inventory.html");
     }
 }

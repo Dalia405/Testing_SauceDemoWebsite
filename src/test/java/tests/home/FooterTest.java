@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import tests.base.BaseTest;
 
 import java.time.Duration;
+import java.util.ArrayList;
 
 public class FooterTest  extends BaseTest {
     @DataProvider(name = "pathSocial")
@@ -30,5 +31,8 @@ public class FooterTest  extends BaseTest {
         WebElement closeButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(pathSocial)));
         closeButton.click();
         Assert.assertEquals(BaseTest.getDriver().findElement(By.xpath(pathSocial)).getAttribute("href"),expectedUrl,"url mismatch");
+        ArrayList<String> tabs = new ArrayList<>(BaseTest.getDriver().getWindowHandles());
+//        System.out.println("tabs.size() "+ tabs.size());
+        BaseTest.getDriver().switchTo().window(tabs.get(0));
     }
 }

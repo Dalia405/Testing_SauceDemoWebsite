@@ -30,13 +30,18 @@
                     <include name="testFooter"/>
                 </methods>
             </class>
+            <class name="tests.home.AddToCart">
+                <methods>
+                    <include name="addProductsToCart"/>
+                </methods>
+            </class>
             <class name="tests.home.MenuTest">
                 <methods>
                     <include name="testOpenMenu"/>
                     <include name="testSideBarLinks"/>
                 </methods>
             </class>
-         </classes>
+        </classes>
     </test>
 
     <test name="SecondTests">
@@ -68,8 +73,8 @@
                     <include name="testGoToYourCart"/>
                     <include name="testClickOnContinueShopping"/>
                     <include name="testTitleOfAllProductInCart"/>
-<!--                    <include name="testRemoveOneCart"/>-->
-<!--                    <include name="testRemoveCart"/>-->
+                    <!--                    <include name="testRemoveOneCart"/>-->
+                    <!--                    <include name="testRemoveCart"/>-->
                     <include name="testClickOnCheckout"/>
                 </methods>
             </class>
@@ -90,10 +95,69 @@
             </class>
             <class name="tests.checkout.CheckOutCompleteTest">
                 <methods>
-<!--                    <include name="testClickOnCancelBTN"/>-->
+                    <!--                    <include name="testClickOnCancelBTN"/>-->
                 </methods>
             </class>
         </classes>
     </test>
 
+    <test name="ThirdTests">
+        <groups>
+            <run>
+                <include name="third"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="testGotTOHomePage"/>
+                </methods>
+            </class>
+            <class name="tests.home.AddToCart">
+                <methods>
+                    <include name="addProductsToCart"/>
+                    <!--                    <include name="VerifyCartCount"/>-->
+                </methods>
+            </class>
+            <class name="tests.YourCartTest">
+                <methods>
+                    <include name="testGoToYourCart"/>
+                    <!--                    <include name="testClickOnContinueShopping"/>-->
+                    <!--                    <include name="testTitleOfAllProductInCart"/>-->
+                    <!--                    <include name="testRemoveOneCart"/>-->
+                    <include name="testRemoveCart"/>
+                    <include name="testClickOnCheckout"/>
+                </methods>
+            </class>
+            <class name="tests.checkout.CheckOutInfoTest">
+                <methods>
+                    <!--                    <include name="testGoBack"/>-->
+                    <!--                    <include name="testInValidFormSubmission"/>-->
+                    <include name="testValidFormSubmission"/>
+                </methods>
+            </class>
+            <class name="tests.checkout.CheckOutOverViewTest">
+                <methods>
+                    <!--                    <include name="testClickOnCancelBTN"/>-->
+                    <include name="testCartCalculations"/>
+                    <!--                    <include name="testTitleOfAllProductInCart"/>-->
+                    <include name="testClickOnFinishBTN"/>
+                </methods>
+            </class>
+            <class name="tests.checkout.CheckOutCompleteTest">
+                <methods>
+                    <!--                    <include name="testClickOnCancelBTN"/>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Cleanup test at the end -->
+    <test name="CleanupTest">
+        <classes>
+            <class name="tests.TestCleanup"/>
+        </classes>
+    </test>
+
 </suite>
+
