@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>FirstTests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/5/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>15/5/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 14 02:39:52 GMT+02:00 2025</td>
+<td>Started on:</td><td>Mon Apr 14 21:06:26 GMT+02:00 2025</td>
 </tr>
-<tr><td>Total time:</td><td>48 seconds (48786 ms)</td>
+<tr><td>Total time:</td><td>50 seconds (50528 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>first </td>
 </tr><tr>
@@ -76,64 +76,21 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.LoginTest.testInValidLogin()'><b>testInValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: invalid_user, , 😞: Password is required</td>
-<td><div><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Password is required] but found [Epic sadface: Password is required]
-	at pages.LoginPage.login(LoginPage.java:42)
-	at tests.LoginTest.testInValidLogin(LoginTest.java:46)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at tests.TestRunner.main(TestRunner.java:25)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace373097727", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace373097727'><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Password is required] but found [Epic sadface: Password is required]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at pages.LoginPage.login(LoginPage.java:42)
-	at tests.LoginTest.testInValidLogin(LoginTest.java:46)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at tests.TestRunner.main(TestRunner.java:25)
-</pre></div></td>
-<td>0</td>
-<td>tests.LoginTest@5762806e</td></tr>
-<tr>
 <td title='tests.LoginTest.testInValidLogin()'><b>testInValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: standard_user, wrong_pass, 😞: Username and password do not match any user in this service</td>
 <td><div><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
 	at pages.LoginPage.login(LoginPage.java:42)
-	at tests.LoginTest.testInValidLogin(LoginTest.java:46)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:45)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at tests.TestRunner.main(TestRunner.java:25)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1358857082", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1358857082'><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1907604549", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1907604549'><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at pages.LoginPage.login(LoginPage.java:42)
-	at tests.LoginTest.testInValidLogin(LoginTest.java:46)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:45)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -160,23 +117,23 @@ function toggleAllBoxes() {
 	at tests.TestRunner.main(TestRunner.java:25)
 </pre></div></td>
 <td>0</td>
-<td>tests.LoginTest@5762806e</td></tr>
+<td>tests.LoginTest@14a2f921</td></tr>
 <tr>
 <td title='tests.LoginTest.testInValidLogin()'><b>testInValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: , , 😞: Username is required</td>
 <td><div><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username is required] but found [Epic sadface: Username is required]
 	at pages.LoginPage.login(LoginPage.java:42)
-	at tests.LoginTest.testInValidLogin(LoginTest.java:46)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:45)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at tests.TestRunner.main(TestRunner.java:25)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1242688388", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1242688388'><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username is required] but found [Epic sadface: Username is required]
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1218519094", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1218519094'><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username is required] but found [Epic sadface: Username is required]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at pages.LoginPage.login(LoginPage.java:42)
-	at tests.LoginTest.testInValidLogin(LoginTest.java:46)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:45)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -202,24 +159,24 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.run(TestNG.java:1079)
 	at tests.TestRunner.main(TestRunner.java:25)
 </pre></div></td>
-<td>5</td>
-<td>tests.LoginTest@5762806e</td></tr>
+<td>6</td>
+<td>tests.LoginTest@14a2f921</td></tr>
 <tr>
-<td title='tests.LoginTest.testInValidLogin()'><b>testInValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: test, 1234, 😞: Username and password do not match any user in this service</td>
-<td><div><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
+<td title='tests.LoginTest.testInValidLogin()'><b>testInValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: invalid_user, , 😞: Password is required</td>
+<td><div><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Password is required] but found [Epic sadface: Password is required]
 	at pages.LoginPage.login(LoginPage.java:42)
-	at tests.LoginTest.testInValidLogin(LoginTest.java:46)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:45)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at tests.TestRunner.main(TestRunner.java:25)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace429058804", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace429058804'><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1475192960", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1475192960'><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Password is required] but found [Epic sadface: Password is required]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at pages.LoginPage.login(LoginPage.java:42)
-	at tests.LoginTest.testInValidLogin(LoginTest.java:46)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:45)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -246,7 +203,7 @@ function toggleAllBoxes() {
 	at tests.TestRunner.main(TestRunner.java:25)
 </pre></div></td>
 <td>0</td>
-<td>tests.LoginTest@5762806e</td></tr>
+<td>tests.LoginTest@14a2f921</td></tr>
 <tr>
 <td title='tests.home.MenuTest.testSideBarLinks()'><b>testSideBarLinks</b><br>Test class: tests.home.MenuTest<br>Parameters: reset_sidebar_link, https://www.saucedemo.com/inventory.html</td>
 <td><div><pre>java.lang.AssertionError: &apos;Remove&apos; buttons should not be visible after removing all items. expected [true] but found [false]
@@ -254,8 +211,8 @@ function toggleAllBoxes() {
 	at tests.home.MenuTest.testSideBarLinks(MenuTest.java:36)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at tests.TestRunner.main(TestRunner.java:25)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1534655921", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1534655921'><pre>java.lang.AssertionError: &apos;Remove&apos; buttons should not be visible after removing all items. expected [true] but found [false]
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace8136897", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace8136897'><pre>java.lang.AssertionError: &apos;Remove&apos; buttons should not be visible after removing all items. expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertTrue(Assert.java:57)
@@ -287,7 +244,50 @@ function toggleAllBoxes() {
 	at tests.TestRunner.main(TestRunner.java:25)
 </pre></div></td>
 <td>0</td>
-<td>tests.home.MenuTest@4034c28c</td></tr>
+<td>tests.home.MenuTest@50a7bc6e</td></tr>
+<tr>
+<td title='tests.LoginTest.testInValidLogin()'><b>testInValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: test, 1234, 😞: Username and password do not match any user in this service</td>
+<td><div><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
+	at pages.LoginPage.login(LoginPage.java:42)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:45)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at tests.TestRunner.main(TestRunner.java:25)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace480184864", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace480184864'><pre>java.lang.AssertionError: Error message does not match for locked out user expected [😞: Username and password do not match any user in this service] but found [Epic sadface: Username and password do not match any user in this service]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at pages.LoginPage.login(LoginPage.java:42)
+	at tests.LoginTest.testInValidLogin(LoginTest.java:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at tests.TestRunner.main(TestRunner.java:25)
+</pre></div></td>
+<td>0</td>
+<td>tests.LoginTest@14a2f921</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -298,75 +298,80 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.home.FiltrationTest.testPriceSorting()'><b>testPriceSorting</b><br>Test class: tests.home.FiltrationTest<br>Parameters: lohi, Prices are not sorted from low to high.</td>
-<td></td>
-<td>2</td>
-<td>tests.home.FiltrationTest@161b062a</td></tr>
-<tr>
-<td title='tests.home.FiltrationTest.testNameSorting()'><b>testNameSorting</b><br>Test class: tests.home.FiltrationTest<br>Parameters: za, Products are not sorted by name Z to A.</td>
-<td></td>
-<td>2</td>
-<td>tests.home.FiltrationTest@161b062a</td></tr>
-<tr>
-<td title='tests.home.MenuTest.testSideBarLinks()'><b>testSideBarLinks</b><br>Test class: tests.home.MenuTest<br>Parameters: inventory_sidebar_link, https://www.saucedemo.com/inventory.html</td>
+<td title='tests.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: standard_user, secret_sauce, https://www.saucedemo.com/inventory.html</td>
 <td></td>
 <td>0</td>
-<td>tests.home.MenuTest@4034c28c</td></tr>
-<tr>
-<td title='tests.home.Navigation.navigateProducts()'><b>navigateProducts</b><br>Test class: tests.home.Navigation</td>
-<td></td>
-<td>14</td>
-<td>tests.home.Navigation@50a7bc6e</td></tr>
-<tr>
-<td title='tests.home.FiltrationTest.testNameSorting()'><b>testNameSorting</b><br>Test class: tests.home.FiltrationTest<br>Parameters: az, Products are not sorted by name A to Z.</td>
-<td></td>
-<td>2</td>
-<td>tests.home.FiltrationTest@161b062a</td></tr>
-<tr>
-<td title='tests.home.FooterTest.testFooter()'><b>testFooter</b><br>Test class: tests.home.FooterTest<br>Parameters: //*[@id="page_wrapper"]/footer/ul/li[2]/a, https://www.facebook.com/saucelabs</td>
-<td></td>
-<td>0</td>
-<td>tests.home.FooterTest@17c1bced</td></tr>
-<tr>
-<td title='tests.home.AddToCart.addProductsToCart()'><b>addProductsToCart</b><br>Test class: tests.home.AddToCart</td>
-<td></td>
-<td>7</td>
-<td>tests.home.AddToCart@2d9d4f9d</td></tr>
-<tr>
-<td title='tests.home.FooterTest.testFooter()'><b>testFooter</b><br>Test class: tests.home.FooterTest<br>Parameters: //*[@id="page_wrapper"]/footer/ul/li[3]/a, https://www.linkedin.com/company/sauce-labs/</td>
-<td></td>
-<td>0</td>
-<td>tests.home.FooterTest@17c1bced</td></tr>
-<tr>
-<td title='tests.home.MenuTest.testSideBarLinks()'><b>testSideBarLinks</b><br>Test class: tests.home.MenuTest<br>Parameters: about_sidebar_link, https://saucelabs.com/</td>
-<td></td>
-<td>5</td>
-<td>tests.home.MenuTest@4034c28c</td></tr>
-<tr>
-<td title='tests.home.FooterTest.testFooter()'><b>testFooter</b><br>Test class: tests.home.FooterTest<br>Parameters: //*[@id="page_wrapper"]/footer/ul/li[1]/a, https://twitter.com/saucelabs</td>
-<td></td>
-<td>0</td>
-<td>tests.home.FooterTest@17c1bced</td></tr>
+<td>tests.LoginTest@14a2f921</td></tr>
 <tr>
 <td title='tests.home.FiltrationTest.testPriceSorting()'><b>testPriceSorting</b><br>Test class: tests.home.FiltrationTest<br>Parameters: hilo, Prices are not sorted from high to low.</td>
 <td></td>
 <td>2</td>
-<td>tests.home.FiltrationTest@161b062a</td></tr>
+<td>tests.home.FiltrationTest@16aa0a0a</td></tr>
 <tr>
-<td title='tests.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: tests.LoginTest<br>Parameters: standard_user, secret_sauce, https://www.saucedemo.com/inventory.html</td>
+<td title='tests.home.FiltrationTest.testPriceSorting()'><b>testPriceSorting</b><br>Test class: tests.home.FiltrationTest<br>Parameters: lohi, Prices are not sorted from low to high.</td>
 <td></td>
-<td>0</td>
-<td>tests.LoginTest@5762806e</td></tr>
+<td>2</td>
+<td>tests.home.FiltrationTest@16aa0a0a</td></tr>
 <tr>
 <td title='tests.home.MenuTest.testOpenMenu()'><b>testOpenMenu</b><br>Test class: tests.home.MenuTest</td>
 <td></td>
 <td>0</td>
-<td>tests.home.MenuTest@4034c28c</td></tr>
+<td>tests.home.MenuTest@50a7bc6e</td></tr>
+<tr>
+<td title='tests.home.AddToCart.VerifyCartCount()'><b>VerifyCartCount</b><br>Test class: tests.home.AddToCart</td>
+<td></td>
+<td>0</td>
+<td>tests.home.AddToCart@691a7f8f</td></tr>
+<tr>
+<td title='tests.home.FooterTest.testFooter()'><b>testFooter</b><br>Test class: tests.home.FooterTest<br>Parameters: //*[@id="page_wrapper"]/footer/ul/li[2]/a, https://www.facebook.com/saucelabs</td>
+<td></td>
+<td>0</td>
+<td>tests.home.FooterTest@780cb77</td></tr>
+<tr>
+<td title='tests.home.AddToCart.addProductsToCart()'><b>addProductsToCart</b><br>Test class: tests.home.AddToCart</td>
+<td></td>
+<td>9</td>
+<td>tests.home.AddToCart@691a7f8f</td></tr>
+<tr>
+<td title='tests.home.FooterTest.testFooter()'><b>testFooter</b><br>Test class: tests.home.FooterTest<br>Parameters: //*[@id="page_wrapper"]/footer/ul/li[1]/a, https://twitter.com/saucelabs</td>
+<td></td>
+<td>0</td>
+<td>tests.home.FooterTest@780cb77</td></tr>
+<tr>
+<td title='tests.home.FiltrationTest.testNameSorting()'><b>testNameSorting</b><br>Test class: tests.home.FiltrationTest<br>Parameters: za, Products are not sorted by name Z to A.</td>
+<td></td>
+<td>2</td>
+<td>tests.home.FiltrationTest@16aa0a0a</td></tr>
+<tr>
+<td title='tests.home.Navigation.navigateProducts()'><b>navigateProducts</b><br>Test class: tests.home.Navigation</td>
+<td></td>
+<td>13</td>
+<td>tests.home.Navigation@1d548a08</td></tr>
+<tr>
+<td title='tests.home.FooterTest.testFooter()'><b>testFooter</b><br>Test class: tests.home.FooterTest<br>Parameters: //*[@id="page_wrapper"]/footer/ul/li[3]/a, https://www.linkedin.com/company/sauce-labs/</td>
+<td></td>
+<td>0</td>
+<td>tests.home.FooterTest@780cb77</td></tr>
+<tr>
+<td title='tests.home.FiltrationTest.testNameSorting()'><b>testNameSorting</b><br>Test class: tests.home.FiltrationTest<br>Parameters: az, Products are not sorted by name A to Z.</td>
+<td></td>
+<td>2</td>
+<td>tests.home.FiltrationTest@16aa0a0a</td></tr>
+<tr>
+<td title='tests.home.MenuTest.testSideBarLinks()'><b>testSideBarLinks</b><br>Test class: tests.home.MenuTest<br>Parameters: about_sidebar_link, https://saucelabs.com/</td>
+<td></td>
+<td>5</td>
+<td>tests.home.MenuTest@50a7bc6e</td></tr>
+<tr>
+<td title='tests.home.MenuTest.testSideBarLinks()'><b>testSideBarLinks</b><br>Test class: tests.home.MenuTest<br>Parameters: inventory_sidebar_link, https://www.saucedemo.com/inventory.html</td>
+<td></td>
+<td>0</td>
+<td>tests.home.MenuTest@50a7bc6e</td></tr>
 <tr>
 <td title='tests.home.MenuTest.testSideBarLinks()'><b>testSideBarLinks</b><br>Test class: tests.home.MenuTest<br>Parameters: logout_sidebar_link, https://www.saucedemo.com/</td>
 <td></td>
 <td>0</td>
-<td>tests.home.MenuTest@4034c28c</td></tr>
+<td>tests.home.MenuTest@50a7bc6e</td></tr>
 </table><p>
 </body>
 </html>

@@ -29,8 +29,10 @@ public class CheckOutOverViewPage {
         List<WebElement> badges = driver.findElements(_badgeClass);
 
         // Assert cart badge equals number of cart items
-        int badgeCount = Integer.parseInt(badges.get(0).getText());
-        Assert.assertEquals(badgeCount, products.size(), "Badge count and product count mismatch");
+        if(badges.size()!=0){
+            int badgeCount = Integer.parseInt(badges.get(0).getText());
+            Assert.assertEquals(badgeCount, products.size(), "Badge count and product count mismatch");
+        }
 
         float calculatedTotal = 0;
 

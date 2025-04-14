@@ -45,6 +45,7 @@ public class CheckOutInfoPage {
     //invalid
     public void inValidFormSubmission(String firstName, String lastName, String postalCode, String expectedError){
 
+
         WebDriverWait wait = new WebDriverWait(BaseTest.getDriver(), Duration.ofSeconds(10));
         // Fill out form
         clearAndType(_firstName,firstName);
@@ -59,6 +60,22 @@ public class CheckOutInfoPage {
         clearAndType(_postalCode,postalCode);
 
         driver.findElement(_continueBTN).click();
+
+        if(!firstName.isEmpty()&&!lastName.isEmpty()&&!postalCode.isEmpty()){
+
+            boolean isValidFirstName = firstName.matches("^[a-zA-Z]+$");
+            boolean isValidLastName = lastName.matches("^[a-zA-Z]+$");
+            // Check if it's numbers only
+            boolean isOnlyNumbers = postalCode.matches("\\d+");
+
+            if(!isValidFirstName||isValidLastName){
+                Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-one.html", expectedError);
+            }
+            if(!isOnlyNumbers){
+                Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-one.html", expectedError);
+
+            }
+        }
 
         // Wait for error message
         WebElement errorElement = wait.until(ExpectedConditions.visibilityOfElementLocated(_errorMSG));

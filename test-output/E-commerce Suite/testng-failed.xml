@@ -29,23 +29,9 @@
     <classes>
       <class name="tests.checkout.CheckOutInfoTest">
         <methods>
-          <include name="testInValidFormSubmission" invocation-numbers="0 1 2"/>
+          <include name="testInValidFormSubmission" invocation-numbers="0 1 2 4"/>
         </methods>
       </class> <!-- tests.checkout.CheckOutInfoTest -->
     </classes>
   </test> <!-- SecondTests(failed) -->
-  <test thread-count="5" name="ThirdTests(failed)">
-    <groups>
-      <run>
-        <include name="third"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="tests.checkout.CheckOutOverViewTest">
-        <methods>
-          <include name="testCartCalculations"/>
-        </methods>
-      </class> <!-- tests.checkout.CheckOutOverViewTest -->
-    </classes>
-  </test> <!-- ThirdTests(failed) -->
 </suite> <!-- Failed suite [E-commerce Suite] -->

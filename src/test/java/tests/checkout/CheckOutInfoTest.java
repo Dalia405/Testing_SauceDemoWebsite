@@ -41,6 +41,8 @@ public class CheckOutInfoTest extends BaseTest {
                 {"First", "", "12345", "Error: Last Name is required"},
                 {"First", "Last", "", "Error: Postal Code is required"},
                 {"", "", "", "Error: First Name is required"}, // First Name is required shown first
+                {"11", "22", "12", "first name and last name field should not accept numbers!"},
+                // {"test", "test", "test", "Postal code must contain numbers only!"},
         };
     }
     @Test(priority = 3, dataProvider = "invalidData")

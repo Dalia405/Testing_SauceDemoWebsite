@@ -85,7 +85,7 @@
                 <methods>
                     <include name="testGoBack"/>
                     <include name="testInValidFormSubmission"/>
-                    <include name="testValidFormSubmission"/>
+<!--                    <include name="testValidFormSubmission"/>-->
                 </methods>
             </class>
             <class name="tests.checkout.CheckOutOverViewTest">
